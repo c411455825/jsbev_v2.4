@@ -4,20 +4,21 @@
     <META http-equiv=Content-Type content="text/html; charset=UTF-8">
     <title>SuperMap JavaScrpt Bev</title>
     <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="../demo/uithemes/base/jquery.ui.all.css">
-    <script type="text/javascript">
-        window.iserverPath = "192.168.13.227:8090";
-        window.resizeFunctions = [];
-        window.bevRoot = "../";
-    </script>
+    <link rel="stylesheet" href="../demo/uithemes/cupertino/jquery.ui.all.css">
     <script src="../common/js/jquery-1.8.2.js"></script>
     <script src="../demo/js/ui/jquery.ui.core.js"></script>
     <script src="../demo/js/ui/jquery.ui.widget.js"></script>
     <script src="../demo/js/ui/jquery.ui.button.js"></script>
+    <!--<script src="../js/SuperMap.Include.js"></script>-->
     <script src="../demo/js/controls/sm_class.js"></script>
-    <script src="js/init.js"></script>
     <script src="../demo/js/controls/sm_loading.js"></script>
-    <script src="../demo/js/controls/sm_accordion.js"></script>
+    <script type="text/javascript">
+    	window.iserverPath = "192.168.13.227:8090"
+        window.resizeFunctions = [];
+        $(document).ready(function(){
+
+        })
+    </script>
 </head>
 <body>
     <div id="toolbar"></div>
@@ -39,7 +40,7 @@
                     try{c[i](a);}catch(e){}
                 }
             }
-            document.getElementById("map").style.width = (w - 260) + "px";
+            //document.getElementById("map").style.width = (w - 370) + "px";
         }
         //window.setTimeout(a,500);
         a();

@@ -56,9 +56,10 @@
                 "opacity":0.8,
                 "filter":"alpha(opacity=80)",
                 "border-right": "1px solid #aed0ea",
-                "z-index":-5
+                "z-index":-5,
+                "background":"#fff"
             })
-            .addClass("ui-widget-overlay")
+//            .addClass("ui-widget-overlay")
             .appendTo(body);
 
         t.toolBarContent = ct = $("<div>")
@@ -70,81 +71,81 @@
             })
             .appendTo(body);
 
-        btn = $("<div>")
-            .css({
-                "position":"absolute",
-                "height":"60px",
-                "width":"20px",
-                "left":"370px",
-                "top":"100px",
-                "border":"#AED0EA 1px solid"
-            })
-            .addClass("ui-widget-overlay ui-corner-tr ui-corner-br")
-            .click(function(){
-                if(t.isToolBarShow){
-                    t.hideToolBar();
-                }
-                else{
-                    t.showToolBar();
-                }
-            })
-            .appendTo(body);
+//        btn = $("<div>")
+//            .css({
+//                "position":"absolute",
+//                "height":"60px",
+//                "width":"20px",
+//                "left":"370px",
+//                "top":"100px",
+//                "border":"#AED0EA 1px solid"
+//            })
+//            .addClass("ui-widget-overlay ui-corner-tr ui-corner-br")
+//            .click(function(){
+//                if(t.isToolBarShow){
+//                    t.hideToolBar();
+//                }
+//                else{
+//                    t.showToolBar();
+//                }
+//            })
+//            .appendTo(body);
+//
+//        t.toolBarButtonIcon = d1 = $("<button>")
+//            .button({
+//                icons: {
+//                    primary: "ui-icon-circle-triangle-w"
+//                },
+//                text: false
+//            })
+//            .css({
+//                "border":"0px solid #000",
+//                "background":"none",
+//                "position":"absolute",
+//                "width":"16px",
+//                "height":"16px",
+//                "left":"2px",
+//                "top":"22px"
+//            })
+//            .appendTo(btn);
 
-        t.toolBarButtonIcon = d1 = $("<button>")
-            .button({
-                icons: {
-                    primary: "ui-icon-circle-triangle-w"
-                },
-                text: false
-            })
-            .css({
-                "border":"0px solid #000",
-                "background":"none",
-                "position":"absolute",
-                "width":"16px",
-                "height":"16px",
-                "left":"2px",
-                "top":"22px"
-            })
-            .appendTo(btn);
-
-        resizeFunctions.push(function(height){
-            btn.css({
-                "top":((height-60)/2)+"px"
-            });
-        });
+//        resizeFunctions.push(function(height){
+//            btn.css({
+//                "top":((height-60)/2)+"px"
+//            });
+//        });
     }
-    B.hideToolBar = function(){
-        var t = this;
-
-        this.toolBarBd.css({
-            "left":"0px"
-        });
-
-        this.toolBarBd.animate({left:'-370px'},"fast",function(){
-            t.isToolBarShow = false;
-            t.toolBarButtonIcon.button({
-                icons: {
-                    primary: "ui-icon-circle-triangle-e"
-                }
-            });
-        });
-    }
-    B.showToolBar = function(){
-        var t = this;
-        this.toolBarBd.css({
-            "left":"-370px"
-        });
-
-        this.toolBarBd.animate({left:'0px'},"fast",function(){
-            t.isToolBarShow = true;
-            t.toolBarButtonIcon.button({
-                icons: {
-                    primary: "ui-icon-circle-triangle-w"
-                }
-            });
-        });
-    }
+//    B.hideToolBar = function(){
+//        var t = this;
+//
+//        this.toolBarBd.css({
+//            "left":"0px"
+//        });
+//
+//        this.toolBarBd.animate({left:'-370px'},"fast",function(){
+//            t.isToolBarShow = false;
+//            t.toolBarButtonIcon.button({
+//                icons: {
+//                    primary: "ui-icon-circle-triangle-e"
+//                }
+//            });
+//        });
+//    }
+//    B.showToolBar = function(){
+//        var t = this;
+//        this.toolBarBd.css({
+//            "left":"-370px"
+//        });
+//
+//        this.toolBarBd.animate({left:'0px'},"fast",function(){
+//            t.isToolBarShow = true;
+//            t.toolBarButtonIcon.button({
+//                icons: {
+//                    primary: "ui-icon-circle-triangle-w"
+//                }
+//            });
+//        });
+//    }
     B.createStep1 = function(){
         var d1, b,t = this;
 
@@ -437,8 +438,8 @@
 
         d1 = $("<div>")
             .css({
-                "margin":"10px 0px 0px 10px",
-                "height":"26px"
+                "margin":"10px 0px 0px 10px"
+//                "height":"26px"
             })
             .appendTo(b);
 
@@ -506,10 +507,10 @@
     B.createInput = function(container,title,defaultContent,width1,width2,isDisable,keyup){
         var d0,d1;
 
-        d0 = $("<span>")
+        d0 = $("<div>")
             .css({
-                "display":"inline-block",
-                "vertical-align":"top",
+//                "display":"inline-block",
+//                "vertical-align":"top",
                 "width":width1||"100px",
                 "padding-top":"5px"
             })
@@ -522,7 +523,7 @@
                 "type":"text"
             })
             .css({
-                "vertical-align":"top",
+//                "vertical-align":"top",
                 "width":width2||"200px",
                 "margin-right":"5px"
             })
