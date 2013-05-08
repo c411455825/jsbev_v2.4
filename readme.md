@@ -1,4 +1,5 @@
-﻿### 一、简介
+﻿合并java版本和在v1上做的修改
+### 一、简介
 
 SuperMap JavaScript Bev是基于SuperMap iClient for JavaScript产品的一个web地图框架，致力于帮助用户快速开发出满足自己需要的地图应用。通过SuperMap JavaScript Bev，用户以可视化向导的方式，生成支持多种地图服务的地图应用，该应用由一些静态页面构成，具有量算等基本功能。大大降低了用户的开发难度和时间成本。
 
