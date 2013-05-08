@@ -93,7 +93,7 @@ LazyLoad=function(k){function p(b,a){var g=k.createElement(b),c;for(c in a)a.has
 
 /**
  * Class: SuperMap.Bev.Main
- * bev框架的初始化类.
+ * bev框架的初始化�?
  */
 (function(){
     function A(){
@@ -129,7 +129,8 @@ LazyLoad=function(k){function p(b,a){var g=k.createElement(b),c;for(c in a)a.has
             "demo/js/controls/sm_dialog.js",
             "demo/js/controls/sm_measure.js",
             "demo/js/controls/sm_geolocate.js",
-            "demo/js/controls/sm_drawFeature.js"
+            "demo/js/controls/sm_drawFeature.js",
+            "demo/js/controls/sm_util.js"
         ]
         /**
          * Property: themePath
@@ -142,7 +143,7 @@ LazyLoad=function(k){function p(b,a){var g=k.createElement(b),c;for(c in a)a.has
     var B = A.prototype;
     /**
      * APIMethod: init
-     * 初始化bev框架。
+     * 初始化bev框架�?
      *
      * Parameters:
      * callback - {Function} 回调方法
@@ -219,7 +220,7 @@ LazyLoad=function(k){function p(b,a){var g=k.createElement(b),c;for(c in a)a.has
      * 加载一个类
      *
      * Parameters:
-     * className - {String} 类名称
+     * className - {String} 类名�?
      * path - {String} 文件路径
      * cb - {Function} 回调方法
      */
