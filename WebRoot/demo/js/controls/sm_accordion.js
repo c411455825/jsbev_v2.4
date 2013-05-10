@@ -12,11 +12,11 @@
              */
             body:null,
             /**
-             * APIProperty: config
-             * {Object} 初始化所需的参数
+             * APIProperty: html
+             * {Array} html内容
              *
              *(code)
-             *config:[
+             *html:[
              *    {
              *        "title":"name1",
              *        "body":$("<p>this is a simple text;this is a simple text;this is a simple text;this is a simple text;this is a simple text;</p>")
@@ -28,7 +28,7 @@
              *],
              * (end)
              */
-            config:[
+            html:[
                 {
                     "title":"name1",
                     "body":$("<p>this is a simple text;this is a simple text;this is a simple text;this is a simple text;this is a simple text;</p>")
@@ -39,6 +39,11 @@
                 }
             ],
             /**
+             * APIProperty: isRoundedCorner
+             * {Boolean} 是否是圆角，默认为true
+             */
+            isRoundedCorner:true,
+            /**
              * Constructor: SuperMap.Bev.Accordion
              * 实例化 Accordion 类。
              *
@@ -48,19 +53,21 @@
              *
              * Examples:
              * (code)
-             * var myAccordion = new SuperMap.Bev.Accordion($("#left_menu"),
-             *    [
+             * var myAccordion = new SuperMap.Bev.Accordion({
+             *     "body":$("#divid"),
+             *     "html":[
              *        {
              *            "title":"查询",
              *            "body":$("<p>this is a examples</p><br><p>this is a examples</p><br><p>this is a examples</p>")
              *        }
              *    ]
-             * );
+             * });
              * (end)
              */
-            init:function (body1,config) {
-                this.body = body1;
-                if(config)this.config = config;
+            init:function (options) {
+                for(var key in options){
+                    this[key] = options[key];
+                }
                 this.create();
             },
             /**
@@ -68,8 +75,8 @@
              * 创建该控件的dom对象。
              */
             create:function(){
-                var c,c1,b;
-                c = this.config;
+                var c,c1, b,t=this;
+                c = this.html;
                 b = this.body;
                 if(c){
                     b.empty();
@@ -89,6 +96,31 @@
 
                 window.setTimeout(function(){
                     b.find("h3").next().css("height","auto");
+                    if(!t.isRoundedCorner){
+                        var css = {
+                            "-moz-border-radius-topleft":"0px",
+                            "-webkit-border-top-left-radius":"0px",
+                            "-khtml-border-top-left-radius":"0px",
+                            "border-top-left-radius":"0px",
+
+                            "-moz-border-radius-topright":"0px",
+                            "-webkit-border-top-right-radius":"0px",
+                            "-khtml-border-top-right-radius":"0px",
+                            "border-top-right-radius":"0px",
+
+                            "-moz-border-radius-bottomleft":"0px",
+                            "-webkit-border-bottom-left-radius":"0px",
+                            "-khtml-border-bottom-left-radius":"0px",
+                            "border-bottom-left-radius":"0px",
+
+                            "-moz-border-radius-bottomright":"0px",
+                            "-webkit-border-bottom-right-radius":"0px",
+                            "-khtml-border-bottom-right-radius":"0px",
+                            "border-bottom-right-radius":"0px"
+                        };
+                        b.find("div").css(css);
+                        b.find("h3").css(css);
+                    }
                 },20);
             }
         },

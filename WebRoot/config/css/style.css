@@ -6,6 +6,10 @@
     width:100%;
     overflow: hidden;
 }
+body {
+    font-size: 62.5%;
+    font-family: "Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+}
 #toolbar{
     position: absolute;
     width:260px;

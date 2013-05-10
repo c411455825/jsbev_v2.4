@@ -29,15 +29,27 @@
         t.iserverLayerInfoSelectBar = null;
         t.requestsObj = {};
         t.zoomBarCheckBox = null;
+        t.htmls = [];
         //t.isReLoadDemo = false;
         t.createToolbar();
         t.createStep1();
-        t.createStep2();
+//        t.createStep2();
         t.createStep3();
         t.createStep4();
-        t.createStep5();
+//        t.createStep5();
 
-        t.setMapStatus();
+        SuperMap.Bev.Main.loadClass("SuperMap.Bev.Accordion","../demo/js/controls/sm_accordion.js",function(){
+            t.accordion = new SuperMap.Bev.Accordion({
+                "body":t.toolBarContent,
+                "html":t.htmls,
+                "isRoundedCorner":false
+            });
+            t.toolBarContent.find(".ui-accordion-content").css({
+                "padding-left":"10px"
+            });
+            t.toolBarContent.prepend(t.createTitleBtns());
+            t.setMapStatus();
+        });
     }
     var B = A.prototype;
     /**
@@ -70,6 +82,27 @@
                 "overflow":"auto"
             })
             .appendTo(body);
+
+//        SuperMap.Bev.Main.loadClass("SuperMap.Bev.Accordion","../demo/js/controls/sm_accordion.js",function(){
+//            t.accordion = new SuperMap.Bev.Accordion({
+//                "body":t.toolBarContent,
+//                "html":[
+//                    {
+//                        "title":"查询",
+//                        "body":$("<p>this is a examples</p><br><p>this is a examples</p><br><p>this is a examples</p>")
+//                    },
+//                    {
+//                        "title":"量算",
+//                        "body":$("<p>this is a examples</p><br><p>this is a examples</p><br><p>this is a examples</p>")
+//                    },
+//                    {
+//                        "title":"绘制",
+//                        "body":$("<p>this is a examples</p><br><p>this is a examples</p><br><p>this is a examples</p>")
+//                    }
+//                ],
+//                "isRoundedCorner":false
+//            });
+//        });
 
 //        btn = $("<div>")
 //            .css({
@@ -147,7 +180,7 @@
 //        });
 //    }
     B.createStep1 = function(){
-        var d1, b,t = this;
+        var d0,d1,d2,d3,b,html={},t = this;
 
         var templeteArr = [
             {
@@ -164,20 +197,22 @@
             }
         ];
 
-        b = t.toolBarContent;
+        //b = t.toolBarContent;
+
+        d0 = $("<div>")
+            .html("选择模板:");
+//            .css({
+//                "margin":"20px 0px 0px 0px"
+//            });
+           // .appendTo(b);
+
+        html.title = "模板和主题";
 
         d1 = $("<div>")
-            .html("1.选择模板")
             .css({
-                "margin":"20px 0px 0px 10px"
+                "margin":"10px 0px 0px 0px"
             })
-            .appendTo(b);
-
-        d1 = $("<div>")
-            .css({
-                "margin":"10px 0px 0px 10px"
-            })
-            .appendTo(b);
+            .appendTo(d0);
 
         this.createSelectBar(d1,templeteArr,function(txt){
             t.confParam.templete = txt;
@@ -198,6 +233,56 @@
             t.confParam.mapCtrl = t.getMapCtrlsStr();
             t.setDemoPara(t.confParam);
         },30,150);
+
+        var skinArr = [
+            "cupertino",
+            "base",
+            "black-tie",
+            "blitzer",
+            "dark-hive",
+            "dot-luv",
+            "eggplant",
+            "excite-bike",
+            "flick",
+            "hot-sneaks",
+            "humanity",
+            "le-frog",
+            "mint-choc",
+            "overcast",
+            "pepper-grinder",
+            "redmond",
+            "smoothness",
+            "south-street",
+            "start",
+            "sunny",
+            "swanky-purse",
+            "trontastic",
+            "ui-darkness",
+            "ui-lightness",
+            "vader"
+        ];
+        //b = t.toolBarContent;
+        d2 = $("<div>")
+            .html("选择主题:")
+            .css({
+                "margin":"10px 0px 0px 0px"
+            })
+            .appendTo(d0);
+
+        d3 = $("<div>")
+            .css({
+                "margin":"10px 0px 0px 0px"
+            })
+            .appendTo(d0);
+
+        this.createSelectBar(d3,skinArr,function(txt){
+            t.confParam.theme = txt;
+
+            t.setDemoPara(t.confParam);
+        },30,150);
+
+        html.body = d0;
+        t.htmls.push(html);
     }
     B.createSelectBar = function(div,txtArr,onSelect,height,width){
         var s1,o1,me=this;
@@ -268,56 +353,56 @@
 
         return s1;
     }
-    B.createStep2 = function(){
-        var d1, b,t = this;
-
-        var skinArr = [
-            "cupertino",
-            "base",
-            "black-tie",
-            "blitzer",
-            "dark-hive",
-            "dot-luv",
-            "eggplant",
-            "excite-bike",
-            "flick",
-            "hot-sneaks",
-            "humanity",
-            "le-frog",
-            "mint-choc",
-            "overcast",
-            "pepper-grinder",
-            "redmond",
-            "smoothness",
-            "south-street",
-            "start",
-            "sunny",
-            "swanky-purse",
-            "trontastic",
-            "ui-darkness",
-            "ui-lightness",
-            "vader"
-        ];
-        b = t.toolBarContent;
-        d1 = $("<div>")
-            .html("2.选择主题")
-            .css({
-                "margin":"20px 0px 0px 10px"
-            })
-            .appendTo(b);
-
-        d1 = $("<div>")
-            .css({
-                "margin":"10px 0px 0px 10px"
-            })
-            .appendTo(b);
-
-        this.createSelectBar(d1,skinArr,function(txt){
-            t.confParam.theme = txt;
-
-            t.setDemoPara(t.confParam);
-        },30,150);
-    }
+//    B.createStep2 = function(){
+//        var d1, b,t = this;
+//
+//        var skinArr = [
+//            "cupertino",
+//            "base",
+//            "black-tie",
+//            "blitzer",
+//            "dark-hive",
+//            "dot-luv",
+//            "eggplant",
+//            "excite-bike",
+//            "flick",
+//            "hot-sneaks",
+//            "humanity",
+//            "le-frog",
+//            "mint-choc",
+//            "overcast",
+//            "pepper-grinder",
+//            "redmond",
+//            "smoothness",
+//            "south-street",
+//            "start",
+//            "sunny",
+//            "swanky-purse",
+//            "trontastic",
+//            "ui-darkness",
+//            "ui-lightness",
+//            "vader"
+//        ];
+//        b = t.toolBarContent;
+//        d1 = $("<div>")
+//            .html("2.选择主题")
+//            .css({
+//                "margin":"20px 0px 0px 10px"
+//            })
+//            .appendTo(b);
+//
+//        d1 = $("<div>")
+//            .css({
+//                "margin":"10px 0px 0px 10px"
+//            })
+//            .appendTo(b);
+//
+//        this.createSelectBar(d1,skinArr,function(txt){
+//            t.confParam.theme = txt;
+//
+//            t.setDemoPara(t.confParam);
+//        },30,150);
+//    }
     B.setDemoPara = function(param){
         var url = "../config.jsp?",me=this;
         var txtArr = [],paramStr;
@@ -338,21 +423,21 @@
         },300);
     }
     B.createStep3 = function(){
-        var b,d1,d2,t = this;
+        var b,d0,d1,d2,t = this;
 
-        b = t.toolBarContent;
-        d1 = $("<div>")
-            .html("3.设置地图参数")
-            .css({
-                "margin":"20px 0px 0px 10px"
-            })
-            .appendTo(b);
+        //b = t.toolBarContent;
+        d0 = $("<div>");
+            //.html("3.设置地图参数");
+//            .css({
+//                "margin":"10px 0px 0px 0px"
+//            })
+            //.appendTo(b);
 
         d1 = $("<div>")
-            .css({
-                "margin":"10px 0px 0px 10px"
-            })
-            .appendTo(b);
+//            .css({
+//                "margin":"10px 0px 0px 0px"
+//            })
+            .appendTo(d0);
 
         t.createInput(d1,"地图名称:","SuperMap",null,null,null,function(value){
             value = value||"";
@@ -362,15 +447,15 @@
         d1 = $("<div>")
             .html("选择地图服务:")
             .css({
-                "margin":"20px 0px 0px 10px"
+                "margin":"10px 0px 0px 0px"
             })
-            .appendTo(b);
+            .appendTo(d0);
 
         d1 = $("<div>")
             .css({
-                "margin":"10px 0px 0px 10px"
+                "margin":"10px 0px 0px 0px"
             })
-            .appendTo(b);
+            .appendTo(d0);
 
         var serviceTypes = [
             {"name":"SuperMap云服务","value":1},//1
@@ -418,7 +503,7 @@
                 "margin":"10px 0px 0px 10px",
                 "display":"none"
             })
-            .appendTo(b);
+            .appendTo(d0);
 
         this.iserverLayerInfoLoading = new SuperMap.Bev.Loading({
             "body":$("<div>")
@@ -426,22 +511,22 @@
                     "margin":"10px 0px 0px 90px",
                     "display":"none"
                 })
-                .appendTo(b)
+                .appendTo(d0)
         });
 
         d1 = $("<div>")
             .html("地图中心点:")
             .css({
-                "margin":"20px 0px 0px 10px"
+                "margin":"10px 0px 0px 0px"
             })
-            .appendTo(b);
+            .appendTo(d0);
 
         d1 = $("<div>")
             .css({
-                "margin":"10px 0px 0px 10px"
+                "margin":"10px 0px 0px 0px"
 //                "height":"26px"
             })
-            .appendTo(b);
+            .appendTo(d0);
 
         d2 = t.createInput(d1,"经度","","40px","100px",true);
         t.lonInput = d2[1];
@@ -450,9 +535,9 @@
 
         d1 = $("<div>")
             .css({
-                "margin":"10px 0px 0px 10px"
+                "margin":"10px 0px 0px 0px"
             })
-            .appendTo(b);
+            .appendTo(d0);
 
         d2 = t.createInput(d1,"地图级别:","",null,"40px",true);
         t.levelInput = d2[1];
@@ -461,15 +546,15 @@
         d1 = $("<div>")
             .html("选择地图控件:")
             .css({
-                "margin":"20px 0px 0px 10px"
+                "margin":"10px 0px 0px 0px"
             })
-            .appendTo(b);
+            .appendTo(d0);
 
         d1 = $("<div>")
             .css({
-                "margin":"10px 0px 0px 10px"
+                "margin":"10px 0px 0px 0px"
             })
-            .appendTo(b);
+            .appendTo(d0);
         this.zoomBarCheckBox = this.createCheckBox("缩放控件",true,d1,checkBoxChange);
         this.mapControlCheckBoxes.push([this.createCheckBox("比例尺",true,d1,checkBoxChange),1]);
         this.mapControlCheckBoxes.push([this.zoomBarCheckBox,2]);
@@ -481,6 +566,11 @@
 
             t.setDemoPara(t.confParam);
         }
+
+        t.htmls.push({
+            "title":"设置地图参数",
+            "body":d0
+        });
     }
     B.getMapCtrlsStr = function(){
         var bs = this.mapControlCheckBoxes;
@@ -748,24 +838,29 @@
      * 创建第四步,选择功能控件
      * **/
     B.createStep4 = function(){
-        var b,d1,t=this;
-        b = this.toolBarContent;
-        d1 = $("<div>")
-            .html("4.选择功能控件")
-            .css({
-                "margin":"20px 0px 0px 10px"
-            })
-            .appendTo(b);
+        var b,d0,d1,t=this;
+        d0 = $("<div>");
+//        d1 = $("<div>")
+//            .html("4.选择功能控件")
+////            .css({
+////                "margin":"10px 0px 0px 0px"
+////            })
+//            .appendTo(d0);
 
         d1 = $("<div>")
-            .css({
-                "margin":"10px 0px 0px 10px"
-            })
-            .appendTo(b);
+//            .css({
+//                "margin":"10px 0px 0px 0px"
+//            })
+            .appendTo(d0);
 
         this.bevControlCheckBoxes.push([this.createCheckBox("量算",true,d1,checkBoxChange),1]);
         this.bevControlCheckBoxes.push([this.createCheckBox("定位",true,d1,checkBoxChange),2]);
         this.bevControlCheckBoxes.push([this.createCheckBox("绘制要素",true,d1,checkBoxChange),3]);
+
+        t.htmls.push({
+            "title":"选择功能控件",
+            "body":d0
+        });
 
         function checkBoxChange(){
             var bs = t.bevControlCheckBoxes;
@@ -792,27 +887,105 @@
         }
     }
     /**
-     * 创建第五步,提交生成页面
+     * 创建顶端的按钮，包括提交按钮和收起按钮
      * */
-    B.createStep5 = function(){
+    B.createTitleBtns = function(){
         var b,d1,d2,me=this;
 
-        b = this.toolBarContent;
+        //b = this.toolBarContent;
         d1 = $("<div>")
+            //.addClass("ui-state-default")
             .css({
-                "margin":"10px 0px 0px 10px"
-            })
-            .appendTo(b);
-        d2 = $("<button>")
-            .html("生成页面>>")
-            .css({
-                "font-size":"14px"
-            })
-            .button()
-            .click(function(){
-                me.submitPage();
-            })
-            .appendTo(d1);
+                "height":"30px",
+                "line-height":"30px",
+                "padding":"0px 5px 0px 5px"
+            });
+//            .css({
+//                "margin":"10px 0px 0px 10px"
+//            })
+//            .appendTo(b);
+//        d2 = $("<a>")
+//            .html("生成页面>>")
+//            .css({
+//                //"font-size":"14px",
+//                "cursor":"pointer",
+//                "float":"right"
+//            })
+//            .mouseover(function(){
+//                $(this).css({
+//                    "text-decoration":"underline"
+//                });
+//            })
+//            .mouseout(function(){
+//                $(this).css({
+//                    "text-decoration":"none"
+//                });
+//            })
+//            .click(function(){
+//                me.submitPage();
+//            })
+//            .appendTo(d1);
+//
+//        d2 = $("<a>")
+//            .html("<<收起面板")
+//            .css({
+//                //"font-size":"14px",
+//                "cursor":"pointer",
+//                "float":"left"
+//            })
+//            .mouseover(function(){
+//                $(this).css({
+//                    "text-decoration":"underline"
+//                });
+//            })
+//            .mouseout(function(){
+//                $(this).css({
+//                    "text-decoration":"none"
+//                });
+//            })
+//            .click(function(){
+//            })
+//            .appendTo(d1);
+
+        ca("生成页面","right",d1,function(){
+            me.submitPage();
+        });
+
+        ca("收起面板","left",d1,function(){
+
+        });
+
+        function ca(txt,float,parent,click){
+            var d2 = $("<a>")
+                .html(txt)
+                .css({
+                    //"font-size":"14px",
+                    "cursor":"pointer",
+                    "float":float,
+                    "margin-top":"5px"
+                })
+//                .mouseover(function(){
+//                    $(this).css({
+//                        "text-decoration":"underline"
+//                    });
+//                })
+//                .mouseout(function(){
+//                    $(this).css({
+//                        "text-decoration":"none"
+//                    });
+//                })
+                .button()
+                .click(click)
+                .appendTo(parent);
+
+            d2.find("span").css({
+                "padding":"3px"
+            });
+
+            return d2;
+        }
+
+        return d1;
     }
     /**
      * 提交参数生成页面
