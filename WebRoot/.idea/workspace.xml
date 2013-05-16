@@ -22,37 +22,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/index.html">
+      <file leaf-file-name="demo.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/demo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="7" selection-start="1079" selection-end="1079" vertical-scroll-proportion="-17.642857">
+            <state line="138" column="111" selection-start="7503" selection-end="7972" vertical-scroll-proportion="0.6381679">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo3.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo3.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="148" column="89" selection-start="6266" selection-end="6543" vertical-scroll-proportion="-14.928572">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sm_dialog.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/js/controls/sm_dialog.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="85" column="14" selection-start="2798" selection-end="2798" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sm_menu.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/js/controls/sm_menu.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="102" column="70" selection-start="3266" selection-end="3266" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sm_util.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/js/controls/sm_util.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="72" column="54" selection-start="2138" selection-end="2138" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sm_menupanel.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/js/controls/sm_menupanel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="109" column="116" selection-start="3582" selection-end="3582" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/css/style.css">
+        <entry file="file://$PROJECT_DIR$/demo/css/templete1/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="15" selection-start="462" selection-end="462" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="900" column="40" selection-start="26503" selection-end="26503" vertical-scroll-proportion="0.41581258">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sm_accordion.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/js/controls/sm_accordion.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="41" selection-start="3238" selection-end="3253" vertical-scroll-proportion="0.0">
+            <state line="118" column="20" selection-start="1837" selection-end="1837" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -69,8 +96,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/config/templete/t1.jsp" />
-        <option value="$PROJECT_DIR$/demo.html" />
-        <option value="$PROJECT_DIR$/demo/css/templete1/style.css" />
         <option value="$PROJECT_DIR$/demo/js/controls/sm_class.js" />
         <option value="$PROJECT_DIR$/demo/js/templete1/sm_bev_main.js" />
         <option value="$PROJECT_DIR$/config/js/init.js" />
@@ -78,13 +103,20 @@
         <option value="$PROJECT_DIR$/config/css/style.css" />
         <option value="$PROJECT_DIR$/demo/js/controls/sm_accordion.js" />
         <option value="$PROJECT_DIR$/config/js/main.js" />
+        <option value="$PROJECT_DIR$/demo/js/templete1/sm_theme.js" />
+        <option value="$PROJECT_DIR$/demo/js/controls/sm_menupanel.js" />
+        <option value="$PROJECT_DIR$/demo/js/controls/sm_util.js" />
+        <option value="$PROJECT_DIR$/demo/css/templete1/style.css" />
+        <option value="$PROJECT_DIR$/demo/js/controls/sm_menu.js" />
+        <option value="$PROJECT_DIR$/demo/js/controls/sm_dialog.js" />
+        <option value="$PROJECT_DIR$/demo.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1452" />
+    <option name="width" value="1456" />
     <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -173,28 +205,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebRoot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebRoot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controls" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -230,13 +240,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1452" height="876" extended-state="0" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13780664" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17965367" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13741007" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18848921" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -307,87 +317,110 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="420" selection-end="420" vertical-scroll-proportion="0.3480916" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/templete/t1.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="78" selection-start="5664" selection-end="5664" vertical-scroll-proportion="0.5801527" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/css/templete1/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="22" selection-start="551" selection-end="551" vertical-scroll-proportion="0.61200583" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="24" selection-start="992" selection-end="992" vertical-scroll-proportion="-16.964285" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/js/controls/sm_class.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="36" selection-start="1589" selection-end="1589" vertical-scroll-proportion="0.2489019">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/js/title.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="35" selection-start="570" selection-end="570" vertical-scroll-proportion="0.38799414">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/js/templete1/sm_bev_main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="24" selection-start="6491" selection-end="6491" vertical-scroll-proportion="0.02835821">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/js/init.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="4" selection-start="6112" selection-end="6112" vertical-scroll-proportion="4.2253733">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="152" column="4" selection-start="6112" selection-end="6112" vertical-scroll-proportion="4.2253733" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/js/controls/sm_dataTable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="39" selection-start="562" selection-end="562" vertical-scroll-proportion="-0.111273795">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="15" selection-start="462" selection-end="462" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="7" selection-start="1079" selection-end="1079" vertical-scroll-proportion="-17.642857">
-          <folding />
-        </state>
+        <state line="17" column="39" selection-start="562" selection-end="562" vertical-scroll-proportion="-0.111273795" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/js/controls/sm_accordion.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="41" selection-start="3238" selection-end="3253" vertical-scroll-proportion="0.0">
+        <state line="126" column="38" selection-start="4592" selection-end="4592" vertical-scroll-proportion="0.82238805">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="900" column="40" selection-start="26503" selection-end="26503" vertical-scroll-proportion="0.41581258">
+        <state line="328" column="2" selection-start="9495" selection-end="9495" vertical-scroll-proportion="0.027818449">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="15" selection-start="462" selection-end="462" vertical-scroll-proportion="0.6676428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="7" selection-start="1079" selection-end="1079" vertical-scroll-proportion="-1.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/js/controls/sm_icon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="73" selection-start="3055" selection-end="3055" vertical-scroll-proportion="-19.321428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/js/templete1/sm_theme.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="33" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/js/controls/sm_menupanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="116" selection-start="3582" selection-end="3582" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/css/templete1/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="20" selection-start="1837" selection-end="1837" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/js/controls/sm_util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="54" selection-start="2138" selection-end="2138" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/js/controls/sm_menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="70" selection-start="3266" selection-end="3266" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/js/controls/sm_dialog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="14" selection-start="2798" selection-end="2798" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/js/controls/sm_measure.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="30" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="89" selection-start="6266" selection-end="6543" vertical-scroll-proportion="-14.928572">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="138" column="111" selection-start="7503" selection-end="7972" vertical-scroll-proportion="0.6381679">
           <folding />
         </state>
       </provider>

@@ -78,7 +78,7 @@
                     if(!body.isDialog)body.dialog();
                     body.dialog(
                         "option", "title",
-                        "<span class=\"icon16_16 " + t.head.icon + " dialog_title_icon\"></span><span class=\"dialog_title_txt\">" + t.head.text + "</span>")
+                        "<span class=\"icon16_16 dialog_title_icon\" style=\"background: url(" + t.head.icon + ")\"></span><span class=\"dialog_title_txt\">" + t.head.text + "</span>")
                         .css({
                             "visibility":"visible"
                         });

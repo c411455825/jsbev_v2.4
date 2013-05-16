@@ -94,7 +94,7 @@
                 ul = $("<ul class=\"sm_menu\"></ul>");
                 for (var i = 0; i < tree.length; i++) {
                     para = tree[i];
-                    li = $("<li class=\"sm_menu_li\"><a href=\"#\"><span class=\"icon16_16 " + para.icon + "\"></span><span class=\"menu_txt\">" + para.text + "</span></a></li>")
+                    li = $("<li class=\"sm_menu_li\"><a href=\"#\"><span class=\"icon16_16\" style=\"background: url(" + para.icon + ")\"></span><span class=\"menu_txt\">" + para.text + "</span></a></li>")
                         .appendTo(ul);
 
                     itemArr.push({

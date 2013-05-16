@@ -4,6 +4,7 @@
  */
 (function(){
     function A(){
+        this.themeName = "cupertino";
         this.init();
     }
     var B = A.prototype;
@@ -23,6 +24,7 @@
      */
     B.set = function(themeName){
         var path,me = this;
+        me.themeName = themeName;
         path = ["demo/uithemes/" + themeName + "/jquery.ui.all.css"];
         path.push("demo/uithemes/" + themeName + "/jquery.ui.theme.css");//jquery.ui.theme
         SuperMap.Bev.Main.load("css",path,function(){

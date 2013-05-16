@@ -107,7 +107,7 @@
                             "padding":"0px",
                             "margin":"0px"
                         });
-                    li_a = $("<a href=\"#tabs-1\"><span class=\"tab_icon " + para.icon + "\"></span><span class=\"tab_txt\">" + para.title + "</span></a>")
+                    li_a = $("<a href=\"#tabs-1\"><span class=\"tab_icon\" style=\"background: url(" + para.icon + ")\"></span><span class=\"tab_txt\">" + para.title + "</span></a>")
                         .appendTo(li);
                     li_div = $("<div style=\"position: absolute;left: 0px;top:46px;\"></div>")
                         .appendTo(li);
