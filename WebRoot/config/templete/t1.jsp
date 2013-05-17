@@ -236,7 +236,7 @@ if(bevCtrl==null)bevCtrl="1_2_3";
                 });
                 $("body").css({
                     "overflow-x":"hidden"
-                })
+                });
             }
         }
         $(window).resize(a);

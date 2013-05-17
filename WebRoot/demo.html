@@ -33,7 +33,12 @@
                     {
                         controls:[
                             new SuperMap.Control.ScaleLine(),
-                            new SuperMap.Control.PanZoomBar(),
+                            new SuperMap.Control.BZoom({
+                                "position":{
+                                    "top":"80px",
+                                    "left":"10px"
+                                }
+                            }),
                             new SuperMap.Control.Navigation({ dragPanOptions: { enableKinetic: true } }),
                             new SuperMap.Control.OverviewMap()
                         ],

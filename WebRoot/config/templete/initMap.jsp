@@ -72,12 +72,14 @@ if("".equals(mapCtrl)){
 						String temp = "";
 						switch(Integer.parseInt(mapCtrlIds[i])){
 							case 1:temp="new SuperMap.Control.ScaleLine()";break;
-							case 2:temp="new SuperMap.Control.PanZoomBar()";break;
+							case 2:temp="new SuperMap.Control.BZoom({\"position\":{\"top\":\"80px\",\"left\":\"10px\"}})";break;
 							case 3:temp="new SuperMap.Control.Navigation({ dragPanOptions:{enableKinetic:true}})";break;
 							case 4:temp="new SuperMap.Control.OverviewMap()";break;
 						}
-						mapCtrlCodeStrBf.append(temp);
-						if(i<mapCtrlIds.length-1){mapCtrlCodeStrBf.append(",");}
+						if(!temp.equals("")){
+							mapCtrlCodeStrBf.append(temp);
+							if(i<mapCtrlIds.length-1){mapCtrlCodeStrBf.append(",");}
+						}
 					}
 					mapCtrlCodeStr = mapCtrlCodeStrBf.toString();
 					%>
