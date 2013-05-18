@@ -1,0 +1,571 @@
+Format: 1.52
+
+
+Title: SuperMap
+SubTitle: JavaScript源代码
+
+Footer: 北京超图软件股份有限公司
+Timestamp: 更新于 10/28/2012
+#   m     - One or two digit month.  January is "1"
+#   mm    - Always two digit month.  January is "01"
+#   mon   - Short month word.  January is "Jan"
+#   month - Long month word.  January is "January"
+#   d     - One or two digit day.  1 is "1"
+#   dd    - Always two digit day.  1 is "01"
+#   day   - Day with letter extension.  1 is "1st"
+#   yy    - Two digit year.  2006 is "06"
+#   yyyy  - Four digit year.  2006 is "2006"
+#   year  - Four digit year.  2006 is "2006"
+
+
+# --------------------------------------------------------------------------
+# 
+# Cut and paste the lines below to change the order in which your files
+# appear on the menu.  Don't worry about adding or removing files, Natural
+# Docs will take care of that.
+# 
+# You can further organize the menu by grouping the entries.  Add a
+# "Group: [name] {" line to start a group, and add a "}" to end it.
+# 
+# You can add text and web links to the menu by adding "Text: [text]" and
+# "Link: [name] ([URL])" lines, respectively.
+# 
+# The formatting and comments are auto-generated, so don't worry about
+# neatness when editing the file.  Natural Docs will clean it up the next
+# time it is run.  When working with groups, just deal with the braces and
+# forget about the indentation and comments.
+# 
+# --------------------------------------------------------------------------
+
+
+Group: SuperMap  {
+
+   Group: BaseTypes  {
+
+      File: Class  (no auto-title, SuperMap\BaseTypes\Class.js)
+      File: Bounds  (SuperMap\BaseTypes\Bounds.js)
+      File: Date  (SuperMap\BaseTypes\Date.js)
+      File: Element  (SuperMap\BaseTypes\Element.js)
+      File: LonLat  (SuperMap\BaseTypes\LonLat.js)
+      File: Pixel  (SuperMap\BaseTypes\Pixel.js)
+      File: Size  (SuperMap\BaseTypes\Size.js)
+      }  # Group: BaseTypes
+
+   Group: Control  {
+
+      File: Control  (no auto-title, SuperMap\Control.js)
+
+      Group: Control  {
+
+         File: Attribution  (SuperMap\Control\Attribution.js)
+         File: DragFeature  (SuperMap\Control\DragFeature.js)
+         File: DragPan  (SuperMap\Control\DragPan.js)
+         File: DrawFeature  (SuperMap\Control\DrawFeature.js)
+         File: Geolocate  (SuperMap\Control\Geolocate.js)
+         File: KeyboardDefaults  (SuperMap\Control\KeyboardDefaults.js)
+         File: LayerSwitcher  (SuperMap\Control\LayerSwitcher.js)
+         File: Measure  (SuperMap\Control\Measure.js)
+         File: ModifyFeature  (SuperMap\Control\ModifyFeature.js)
+         File: MousePosition  (SuperMap\Control\MousePosition.js)
+         File: Navigation  (SuperMap\Control\Navigation.js)
+         File: OverviewMap  (SuperMap\Control\OverviewMap.js)
+         File: Panel  (SuperMap\Control\Panel.js)
+         File: PanZoomBar  (SuperMap\Control\PanZoomBar.js)
+         File: PinchZoom  (SuperMap\Control\PinchZoom.js)
+         File: ScaleLine  (SuperMap\Control\ScaleLine.js)
+         File: SelectCluster  (SuperMap\Control\SelectCluster.js)
+         File: SelectFeature  (SuperMap\Control\SelectFeature.js)
+         File: TouchNavigation  (SuperMap\Control\TouchNavigation.js)
+         File: Zoom  (SuperMap\Control\Zoom.js)
+         File: ZoomBox  (SuperMap\Control\ZoomBox.js)
+         }  # Group: Control
+
+      }  # Group: Control
+
+   Group: Filter  {
+
+      File: Filter  (no auto-title, SuperMap\Filter.js)
+      File: Comparison  (SuperMap\Filter\Comparison.js)
+      File: Logical  (SuperMap\Filter\Logical.js)
+      File: Spatial  (SuperMap\Filter\Spatial.js)
+      }  # Group: Filter
+
+   Group: Format  {
+
+      File: Format  (no auto-title, SuperMap\Format.js)
+
+      Group: Filter  {
+
+         File: v1  (no auto-title, SuperMap\Format\Filter\v1.js)
+         File: v1_0_0  (no auto-title, SuperMap\Format\Filter\v1_0_0.js)
+         }  # Group: Filter
+
+      Group: GML  {
+
+         File: Base  (no auto-title, SuperMap\Format\GML\Base.js)
+         File: v2  (no auto-title, SuperMap\Format\GML\v2.js)
+         }  # Group: GML
+
+      Group: WFST  {
+
+         File: v1  (no auto-title, SuperMap\Format\WFST\v1.js)
+         File: v1_0_0  (no auto-title, SuperMap\Format\WFST\v1_0_0.js)
+         }  # Group: WFST
+
+      Group: XML  {
+
+         File: VersionedOGC  (no auto-title, SuperMap\Format\XML\VersionedOGC.js)
+         }  # Group: XML
+
+      File: CQL  (SuperMap\Format\CQL.js)
+      File: Filter  (no auto-title, SuperMap\Format\Filter.js)
+      File: GML  (SuperMap\Format\GML.js)
+      File: OGCExceptionReport  (SuperMap\Format\OGCExceptionReport.js)
+      File: DEFAULTS  (no auto-title, SuperMap\Format\WFST.js)
+      File: WKT  (SuperMap\Format\WKT.js)
+      File: XML  (SuperMap\Format\XML.js)
+      }  # Group: Format
+
+   Group: Geometry  {
+
+      File: Geometry  (no auto-title, SuperMap\Geometry.js)
+      File: Collection  (SuperMap\Geometry\Collection.js)
+      File: Curve  (SuperMap\Geometry\Curve.js)
+      File: LinearRing  (SuperMap\Geometry\LinearRing.js)
+      File: LineString  (SuperMap\Geometry\LineString.js)
+      File: MultiLineString  (SuperMap\Geometry\MultiLineString.js)
+      File: MultiPoint  (SuperMap\Geometry\MultiPoint.js)
+      File: MultiPolygon  (SuperMap\Geometry\MultiPolygon.js)
+      File: Point  (SuperMap\Geometry\Point.js)
+      File: Polygon  (SuperMap\Geometry\Polygon.js)
+      File: Rectangle  (SuperMap\Geometry\Rectangle.js)
+      }  # Group: Geometry
+
+   Group: Handler  {
+
+      File: Handler  (no auto-title, SuperMap\Handler.js)
+      File: Box  (no auto-title, SuperMap\Handler\Box.js)
+      File: Click  (no auto-title, SuperMap\Handler\Click.js)
+      File: Drag  (no auto-title, SuperMap\Handler\Drag.js)
+      File: Feature  (no auto-title, SuperMap\Handler\Feature.js)
+      File: Hover  (no auto-title, SuperMap\Handler\Hover.js)
+      File: Keyboard  (no auto-title, SuperMap\Handler\Keyboard.js)
+      File: MouseWheel  (no auto-title, SuperMap\Handler\MouseWheel.js)
+      File: Path  (no auto-title, SuperMap\Handler\Path.js)
+      File: Pinch  (no auto-title, SuperMap\Handler\Pinch.js)
+      File: Point  (no auto-title, SuperMap\Handler\Point.js)
+      File: Polygon  (no auto-title, SuperMap\Handler\Polygon.js)
+      File: RegularPolygon  (no auto-title, SuperMap\Handler\RegularPolygon.js)
+      }  # Group: Handler
+
+   Group: Layer  {
+
+      File: Layer  (no auto-title, SuperMap\Layer.js)
+
+      Group: Layer  {
+
+         Group: Vector  {
+
+            File: RootContainer  (no auto-title, SuperMap\Layer\Vector\RootContainer.js)
+            }  # Group: Vector
+
+         File: CanvasLayer  (SuperMap\Layer\CanvasLayer.js)
+         File: CloudLayer  (no auto-title, SuperMap\Layer\CloudLayer.js)
+         File: ClusterLayer  (no auto-title, SuperMap\Layer\ClusterLayer.js)
+         File: Grid  (no auto-title, SuperMap\Layer\Grid.js)
+         File: HeatMapLayer  (no auto-title, SuperMap\Layer\HeatMapLayer.js)
+         File: HTTPRequest  (no auto-title, SuperMap\Layer\HTTPRequest.js)
+         File: Markers  (no auto-title, SuperMap\Layer\Markers.js)
+         File: SimpleCachedLayer  (no auto-title, SuperMap\Layer\SimpleCachedLayer.js)
+         File: TiledDynamicRESTLayer  (no auto-title, SuperMap\Layer\TiledDynamicRESTLayer.js)
+         File: Vector  (no auto-title, SuperMap\Layer\Vector.js)
+         File: WMS  (no auto-title, SuperMap\Layer\WMS.js)
+         File: WMTS  (no auto-title, SuperMap\Layer\WMTS.js)
+         File: CanvasImage  (no auto-title, SuperMap\Layer\CanvasImage.js)
+         File: Layer.Image  (SuperMap\Layer\Image.js)
+         }  # Group: Layer
+
+      }  # Group: Layer
+
+   Group: Popup  {
+
+      File: Popup  (no auto-title, SuperMap\Popup.js)
+      File: Anchored  (SuperMap\Popup\Anchored.js)
+      File: Framed  (SuperMap\Popup\Framed.js)
+      File: FramedCloud  (SuperMap\Popup\FramedCloud.js)
+      }  # Group: Popup
+
+   Group: Protocol  {
+
+      File: Protocol  (no auto-title, SuperMap\Protocol.js)
+      File: WFS  (SuperMap\Protocol\WFS.js)
+
+      Group: WFS  {
+
+         File: v1  (no auto-title, SuperMap\Protocol\WFS\v1.js)
+         File: v1_0_0  (no auto-title, SuperMap\Protocol\WFS\v1_0_0.js)
+         }  # Group: WFS
+
+      }  # Group: Protocol
+
+   Group: Renderer  {
+
+      File: Renderer  (no auto-title, SuperMap\Renderer.js)
+      File: Renderer\Canvas.js  (SuperMap\Renderer\Canvas.js)
+      File: ElementsIndexer  (SuperMap\Renderer\Elements.js)
+      File: Canvas  (no auto-title, SuperMap\Renderer\Canvas2.js)
+      File: SVG  (no auto-title, SuperMap\Renderer\SVG.js)
+      File: VML  (no auto-title, SuperMap\Renderer\VML.js)
+      }  # Group: Renderer
+
+   Group: REST  {
+
+      File: REST  (no auto-title, SuperMap\REST.js)
+
+      Group: Data  {
+
+         File: EditFeaturesEventArgs  (SuperMap\REST\Data\EditFeaturesEventArgs.js)
+         File: EditFeaturesParameters  (SuperMap\REST\Data\EditFeaturesParameters.js)
+         File: EditFeaturesResult  (SuperMap\REST\Data\EditFeaturesResult.js)
+         File: EditFeaturesService  (SuperMap\REST\Data\EditFeaturesService.js)
+         File: FieldStatisticEventArgs  (SuperMap\REST\Data\FieldStatisticEventArgs.js)
+         File: FieldStatisticResult  (SuperMap\REST\Data\FieldStatisticResult.js)
+         File: FieldStatisticService  (SuperMap\REST\Data\FieldStatisticService.js)
+         File: GetFaturesByIDsParameters  (SuperMap\REST\Data\GetFeaturesByIDsParameters.js)
+         File: GetFeaturesByBufferParameters  (SuperMap\REST\Data\GetFeaturesByBufferParameters.js)
+         File: GetFeaturesByBufferService  (SuperMap\REST\Data\GetFeaturesByBufferService.js)
+         File: GetFeaturesByGeometryParameters  (SuperMap\REST\Data\GetFeaturesByGeometryParameters.js)
+         File: GetFeaturesByGeometryService  (SuperMap\REST\Data\GetFeaturesByGeometryService.js)
+         File: GetFeaturesByIDsService  (SuperMap\REST\Data\GetFeaturesByIDsService.js)
+         File: GetFeaturesBySQLParameters  (SuperMap\REST\Data\GetFeaturesBySQLParameters.js)
+         File: GetFeaturesBySQLService  (SuperMap\REST\Data\GetFeaturesBySQLService.js)
+         File: GetFeaturesEventArgs  (SuperMap\REST\Data\GetFeaturesEventArgs.js)
+         File: GetFeaturesParametersBase  (SuperMap\REST\Data\GetFeaturesParametersBase.js)
+         File: GetFeaturesResult  (SuperMap\REST\Data\GetFeaturesResult.js)
+         File: GetFeaturesServiceBase  (SuperMap\REST\Data\GetFeaturesServiceBase.js)
+         File: GetFieldsEventArgs  (SuperMap\REST\Data\GetFieldsEventArgs.js)
+         File: GetFieldsResult  (SuperMap\REST\Data\GetFieldsResult.js)
+         File: GetFieldsService  (SuperMap\REST\Data\GetFieldsService.js)
+         }  # Group: Data
+
+      Group: LayerServices  {
+
+         File: ChartAttributeSpec  (SuperMap\REST\LayerServices\ChartAttributeSpec.js)
+         File: ChartFeatureInfoSpec  (SuperMap\REST\LayerServices\ChartFeatureInfoSpec.js)
+         File: ChartFeatureInfoSpecsResult  (SuperMap\REST\LayerServices\ChartFeatureInfoSpecsResult.js)
+         File: ChartFeatureInfoSpecsService  (SuperMap\REST\LayerServices\ChartFeatureInfoSpecsService.js)
+         File: ColorDictionary  (SuperMap\REST\LayerServices\ColorDictionary.js)
+         File: DatasetInfo  (SuperMap\REST\LayerServices\DatasetInfo.js)
+         File: GetLayersInfoEventArgs  (SuperMap\REST\LayerServices\GetLayersInfoEventArgs.js)
+         File: GetLayersInfoService  (SuperMap\REST\LayerServices\GetLayersInfoService.js)
+         File: Grid  (SuperMap\REST\LayerServices\Grid.js)
+         File: Image  (SuperMap\REST\LayerServices\Image.js)
+         File: OverlapDisplayedOptions  (SuperMap\REST\LayerServices\OverlapDisplayedOptions.js)
+         File: ServerTheme  (SuperMap\REST\LayerServices\ServerTheme.js)
+         File: SetLayersInfoEventArgs  (SuperMap\REST\LayerServices\SetLayersInfoEventArgs.js)
+         File: SetLayersInfoResult  (SuperMap\REST\LayerServices\SetLayersInfoResult.js)
+         File: SetLayersInfoService  (SuperMap\REST\LayerServices\SetLayersInfoService.js)
+         File: UGCLayer  (SuperMap\REST\LayerServices\UGCLayer.js)
+         File: UGCMapLayer  (SuperMap\REST\LayerServices\UGCMapLayer.js)
+         File: UGCSubLayer  (SuperMap\REST\LayerServices\UGCSubLayer.js)
+         File: Vector  (SuperMap\REST\LayerServices\Vector.js)
+         }  # Group: LayerServices
+
+      Group: MapService  {
+
+         File: MapService  (SuperMap\REST\MapService\MapService.js)
+         File: MapServiceEventArgs  (SuperMap\REST\MapService\MapServiceEventArgs.js)
+         File: MapServiceResult  (SuperMap\REST\MapService\MapServiceResult.js)
+         }  # Group: MapService
+
+      Group: Measure  {
+
+         File: MeasureEventArgs  (SuperMap\REST\Measure\MeasureEventArgs.js)
+         File: MeasureParameters  (SuperMap\REST\Measure\MeasureParameters.js)
+         File: MeasureResult  (SuperMap\REST\Measure\MeasureResult.js)
+         File: MeasureService  (SuperMap\REST\Measure\MeasureService.js)
+         }  # Group: Measure
+
+      Group: NetworkAnalyst  {
+
+         File: ClosestFacilityPath  (SuperMap\REST\NetworkAnalyst\ClosestFacilityPath.js)
+         File: ComputeWeightMatrixEventArgs  (SuperMap\REST\NetworkAnalyst\ComputeWeightMatrixEventArgs.js)
+         File: ComputeWeightMatrixParameters  (SuperMap\REST\NetworkAnalyst\ComputeWeightMatrixParameters.js)
+         File: ComputeWeightMatrixResult  (SuperMap\REST\NetworkAnalyst\ComputeWeightMatrixResult.js)
+         File: ComputeWeightMatrixService  (SuperMap\REST\NetworkAnalyst\ComputeWeightMatrixService.js)
+         File: DemandResult  (SuperMap\REST\NetworkAnalyst\DemandResult.js)
+         File: FindClosestFacilitiesEventArgs  (SuperMap\REST\NetworkAnalyst\FindClosestFacilitiesEventArgs.js)
+         File: FindClosestFacilitiesParameters  (SuperMap\REST\NetworkAnalyst\FindClosestFacilitiesParameters.js)
+         File: FindClosestFacilitiesService  (SuperMap\REST\NetworkAnalyst\FindClosestFacilitiesService.js)
+         File: FindClosestFacilityResult  (SuperMap\REST\NetworkAnalyst\FindClosestFacilityResult.js)
+         File: FindLocationEventArgs  (SuperMap\REST\NetworkAnalyst\FindLocationEventArgs.js)
+         File: FindLocationParameters  (SuperMap\REST\NetworkAnalyst\FindLocationParameters.js)
+         File: FindLocationResult  (SuperMap\REST\NetworkAnalyst\FindLocationResult.js)
+         File: FindLocationService  (SuperMap\REST\NetworkAnalyst\FindLocationService.js)
+         File: FindMTSPPathsEventArgs  (SuperMap\REST\NetworkAnalyst\FindMTSPPathsEventArgs.js)
+         File: FindMTSPPathsParameters  (SuperMap\REST\NetworkAnalyst\FindMTSPPathsParameters.js)
+         File: FindMTSPPathsResult  (SuperMap\REST\NetworkAnalyst\FindMTSPPathsResult.js)
+         File: FindMTSPPathsService  (SuperMap\REST\NetworkAnalyst\FindMTSPPathsService.js)
+         File: FindPathEventArgs  (SuperMap\REST\NetworkAnalyst\FindPathEventArgs.js)
+         File: FindPathParameters  (SuperMap\REST\NetworkAnalyst\FindPathParameters.js)
+         File: FindPathResult  (SuperMap\REST\NetworkAnalyst\FindPathResult.js)
+         File: FindPathService  (SuperMap\REST\NetworkAnalyst\FindPathService.js)
+         File: FindServiceAreasEventArgs  (SuperMap\REST\NetworkAnalyst\FindServiceAreasEventArgs.js)
+         File: FindServiceAreasParameters  (SuperMap\REST\NetworkAnalyst\FindServiceAreasParameters.js)
+         File: FindServiceAreasResult  (SuperMap\REST\NetworkAnalyst\FindServiceAreasResult.js)
+         File: FindServiceAreasService  (SuperMap\REST\NetworkAnalyst\FindServiceAreasService.js)
+         File: FindTSPPathsEventArgs  (SuperMap\REST\NetworkAnalyst\FindTSPPathsEventArgs.js)
+         File: FindTSPPathsParameters  (SuperMap\REST\NetworkAnalyst\FindTSPPathsParameters.js)
+         File: FindTSPPathsResult  (SuperMap\REST\NetworkAnalyst\FindTSPPathsResult.js)
+         File: FindTSPPathsService  (SuperMap\REST\NetworkAnalyst\FindTSPPathsService.js)
+         File: GetEdgeWeightNamesEventArgs  (SuperMap\REST\NetworkAnalyst\GetEdgeWeightNamesEventArgs.js)
+         File: GetEdgeWeightNamesResult  (SuperMap\REST\NetworkAnalyst\GetEdgeWeightNamesResult.js)
+         File: GetEdgeWeightNamesService  (SuperMap\REST\NetworkAnalyst\GetEdgeWeightNamesService.js)
+         File: GetTurnNodeWeightNamesEventArgs  (SuperMap\REST\NetworkAnalyst\GetTurnNodeWeightNamesEventArgs.js)
+         File: GetTurnNodeWeightNamesResult  (SuperMap\REST\NetworkAnalyst\GetTurnNodeWeightNamesResult.js)
+         File: GetTurnNodeWeightNamesService  (SuperMap\REST\NetworkAnalyst\GetTurnNodeWeightNamesService.js)
+         File: MTSPPath  (SuperMap\REST\NetworkAnalyst\MTSPPath.js)
+         File: Path  (SuperMap\REST\NetworkAnalyst\Path.js)
+         File: PathGuideItem  (SuperMap\REST\NetworkAnalyst\PathGuideItem.js)
+         File: PointWithMeasure  (SuperMap\REST\NetworkAnalyst\PointWithMeasure.js)
+         File: Route  (SuperMap\REST\NetworkAnalyst\Route.js)
+         File: ServiceArea  (SuperMap\REST\NetworkAnalyst\ServiceArea.js)
+         File: SupplyCenter  (SuperMap\REST\NetworkAnalyst\SupplyCenter.js)
+         File: SupplyResult  (SuperMap\REST\NetworkAnalyst\SupplyResult.js)
+         File: TransportationAnalystParameter  (SuperMap\REST\NetworkAnalyst\TransportationAnalystParameter.js)
+         File: TransportationAnalystResultSetting  (SuperMap\REST\NetworkAnalyst\TransportationAnalystResultSetting.js)
+         File: TSPPath  (SuperMap\REST\NetworkAnalyst\TSPPath.js)
+         }  # Group: NetworkAnalyst
+
+      Group: Query  {
+
+         File: ChartQueryFilterParameter  (SuperMap\REST\Query\ChartQueryFilterParameter.js)
+         File: ChartQueryParameters  (SuperMap\REST\Query\ChartQueryParameters.js)
+         File: ChartQueryService  (SuperMap\REST\Query\ChartQueryService.js)
+         File: DatasourceConnectionInfo  (SuperMap\REST\Query\DatasourceConnectionInfo.js)
+         File: FilterParameter  (SuperMap\REST\Query\FilterParameter.js)
+         File: JoinItem  (SuperMap\REST\Query\JoinItem.js)
+         File: LinkItem  (SuperMap\REST\Query\LinkItem.js)
+         File: QueryByBoundsParameters  (SuperMap\REST\Query\QueryByBoundsParameters.js)
+         File: QueryByBoundsService  (SuperMap\REST\Query\QueryByBoundsService.js)
+         File: QueryByDistanceParameters  (SuperMap\REST\Query\QueryByDistanceParameters.js)
+         File: QueryByDistanceService  (SuperMap\REST\Query\QueryByDistanceService.js)
+         File: QueryByGeometryParameters  (SuperMap\REST\Query\QueryByGeometryParameters.js)
+         File: QueryByGeometryService  (SuperMap\REST\Query\QueryByGeometryService.js)
+         File: QueryBySQLParameters  (SuperMap\REST\Query\QueryBySQLParameters.js)
+         File: QueryBySQLService  (SuperMap\REST\Query\QueryBySQLService.js)
+         File: QueryEventArgs  (SuperMap\REST\Query\QueryEventArgs.js)
+         File: QueryParameters  (SuperMap\REST\Query\QueryParameters.js)
+         File: QueryResult  (SuperMap\REST\Query\QueryResult.js)
+         File: QueryService  (SuperMap\REST\Query\QueryService.js)
+         File: Recordset  (SuperMap\REST\Query\Recordset.js)
+         File: ResourceInfo  (SuperMap\REST\Query\ResourceInfo.js)
+         }  # Group: Query
+
+      Group: ServerType  {
+
+         File: ServerColor  (SuperMap\REST\ServerType\ServerColor.js)
+         File: ServerFeature  (SuperMap\REST\ServerType\ServerFeature.js)
+         File: ServerGeometry  (SuperMap\REST\ServerType\ServerGeometry.js)
+         File: ServerStyle  (SuperMap\REST\ServerType\ServerStyle.js)
+         File: ServerTextStyle  (SuperMap\REST\ServerType\ServerTextStyle.js)
+         }  # Group: ServerType
+
+      Group: Service  {
+
+         File: ServiceBase  (SuperMap\REST\Service\ServiceBase.js)
+         File: ServiceEventArgs  (SuperMap\REST\Service\ServiceEventArgs.js)
+         File: ServiceException  (SuperMap\REST\Service\ServiceException.js)
+         File: ServiceFailedEventArgs  (SuperMap\REST\Service\ServiceFailedEventArgs.js)
+         }  # Group: Service
+
+      Group: SpatialAnalyst  {
+
+         File: BufferAnalystEventArgs  (SuperMap\REST\SpatialAnalyst\BufferAnalystEventArgs.js)
+         File: BufferAnalystParameters  (SuperMap\REST\SpatialAnalyst\BufferAnalystParameters.js)
+         File: BufferAnalystService  (SuperMap\REST\SpatialAnalyst\BufferAnalystService.js)
+         File: BufferDistance  (SuperMap\REST\SpatialAnalyst\BufferDistance.js)
+         File: BufferSetting  (SuperMap\REST\SpatialAnalyst\BufferSetting.js)
+         File: DataReturnOption  (SuperMap\REST\SpatialAnalyst\DataReturnOption.js)
+         File: DatasetBufferAnalystParameters  (SuperMap\REST\SpatialAnalyst\InterpolationDensityAnalystParameters.js)
+         File: DatasetBufferAnalystParameters  (SuperMap\REST\SpatialAnalyst\DatasetBufferAnalystParameters.js)
+         File: DatasetBufferAnalystResult  (SuperMap\REST\SpatialAnalyst\DatasetBufferAnalystResult.js)
+         File: DatasetOverlayAnalystParameters  (SuperMap\REST\SpatialAnalyst\DatasetOverlayAnalystParameters.js)
+         File: DatasetOverlayAnalystResult  (SuperMap\REST\SpatialAnalyst\DatasetOverlayAnalystResult.js)
+         File: DatasetSurfaceAnalystParameters  (SuperMap\REST\SpatialAnalyst\DatasetSurfaceAnalystParameters.js)
+         File: DatasetThiessenAnalystParameters  (SuperMap\REST\SpatialAnalyst\DatasetThiessenAnalystParameters.js)
+         File: GenerateSpatialDataEventArgs  (SuperMap\REST\SpatialAnalyst\GenerateSpatialDataEventArgs.js)
+         File: GenerateSpatialDataParameters  (SuperMap\REST\SpatialAnalyst\GenerateSpatialDataParameters.js)
+         File: GenerateSpatialDataResult  (SuperMap\REST\SpatialAnalyst\GenerateSpatialDataResult.js)
+         File: GenerateSpatialDataService  (SuperMap\REST\SpatialAnalyst\GenerateSpatialDataService.js)
+         File: GeometryBufferAnalystParameters  (SuperMap\REST\SpatialAnalyst\GeometryBufferAnalystParameters.js)
+         File: GeometryBufferAnalystResult  (SuperMap\REST\SpatialAnalyst\GeometryBufferAnalystResult.js)
+         File: GeometryOverlayAnalystParameters  (SuperMap\REST\SpatialAnalyst\GeometryOverlayAnalystParameters.js)
+         File: GeometryOverlayAnalystResult  (SuperMap\REST\SpatialAnalyst\GeometryOverlayAnalystResult.js)
+         File: GeometrySurfaceAnalystParameters  (SuperMap\REST\SpatialAnalyst\GeometrySurfaceAnalystParameters.js)
+         File: GeometryThiessenAnalystParameters  (SuperMap\REST\SpatialAnalyst\GeometryThiessenAnalystParameters.js)
+         File: GeoRelationAnalystEventArgs  (SuperMap\REST\SpatialAnalyst\GeoRelationAnalystEventArgs.js)
+         File: GeoRelationAnalystParameters  (SuperMap\REST\SpatialAnalyst\GeoRelationAnalystParameters.js)
+         File: GeoRelationAnalystResult  (SuperMap\REST\SpatialAnalyst\GeoRelationAnalystResult.js)
+         File: GeoRelationAnalystService  (SuperMap\REST\SpatialAnalyst\GeoRelationAnalystService.js)
+         File: GeoRelationResult  (SuperMap\REST\SpatialAnalyst\GeoRelationResult.js)
+         File: InterpolationAnalystEventArgs  (SuperMap\REST\SpatialAnalyst\InterpolationAnalystEventArgs.js)
+         File: InterpolationAnalystParameters  (SuperMap\REST\SpatialAnalyst\InterpolationAnalystParameters.js)
+         File: InterpolationAnalystResult  (SuperMap\REST\SpatialAnalyst\InterpolationAnalystResult.js)
+         File: InterpolationAnalystService  (SuperMap\REST\SpatialAnalyst\InterpolationAnalystService.js)
+         File: InterpolationIDWAnalystParameter  (SuperMap\REST\SpatialAnalyst\InterpolationIDWAnalystParameters.js)
+         File: InterpolationKrigingAnalystParameter  (SuperMap\REST\SpatialAnalyst\InterpolationKrigingAnalystParameters.js)
+         File: InterpolationRBFAnalystParameter  (SuperMap\REST\SpatialAnalyst\InterpolationRBFAnalystParameters.js)
+         File: OverlayAnalystEventArgs  (SuperMap\REST\SpatialAnalyst\OverlayAnalystEventArgs.js)
+         File: OverlayAnalystParameters  (SuperMap\REST\SpatialAnalyst\OverlayAnalystParameters.js)
+         File: OverlayAnalystService  (SuperMap\REST\SpatialAnalyst\OverlayAnalystService.js)
+         File: RouteCalculateMeasureEventArgs  (SuperMap\REST\SpatialAnalyst\RouteCalculateMeasureEventArgs.js)
+         File: RouteCalculateMeasureParameters  (SuperMap\REST\SpatialAnalyst\RouteCalculateMeasureParameters.js)
+         File: RouteCalculateMeasureResult  (SuperMap\REST\SpatialAnalyst\RouteCalculateMeasureResult.js)
+         File: RouteCalculateMeasureService  (SuperMap\REST\SpatialAnalyst\RouteCalculateMeasureService.js)
+         File: RouteLocatorEventArgs  (SuperMap\REST\SpatialAnalyst\RouteLocatorEventArgs.js)
+         File: RouteLocatorParameters  (SuperMap\REST\SpatialAnalyst\RouteLocatorParameters.js)
+         File: RouteLocatorResult  (SuperMap\REST\SpatialAnalyst\RouteLocatorResult.js)
+         File: RouteLocatorService  (SuperMap\REST\SpatialAnalyst\RouteLocatorService.js)
+         File: SpatialAnalystEventArgs  (SuperMap\REST\SpatialAnalyst\SpatialAnalystEventArgs.js)
+         File: SpatialAnalystResult  (SuperMap\REST\SpatialAnalyst\SpatialAnalystResult.js)
+         File: SurfaceAnalystEventArgs  (SuperMap\REST\SpatialAnalyst\SurfaceAnalystEventArgs.js)
+         File: SurfaceAnalystParameters  (SuperMap\REST\SpatialAnalyst\SurfaceAnalystParameters.js)
+         File: SurfaceAnalystParametersSetting  (SuperMap\REST\SpatialAnalyst\SurfaceAnalystParametersSetting.js)
+         File: SurfaceAnalystResult  (SuperMap\REST\SpatialAnalyst\SurfaceAnalystResult.js)
+         File: SurfaceAnalystService  (SuperMap\REST\SpatialAnalyst\SurfaceAnalystService.js)
+         File: ThiessenAnalystEventArgs  (SuperMap\REST\SpatialAnalyst\ThiessenAnalystEventArgs.js)
+         File: ThiessenAnalystParameters  (SuperMap\REST\SpatialAnalyst\ThiessenAnalystParameters.js)
+         File: ThiessenAnalystResult  (SuperMap\REST\SpatialAnalyst\ThiessenAnalystResult.js)
+         File: ThiessenAnalystService  (SuperMap\REST\SpatialAnalyst\ThiessenAnalystService.js)
+         }  # Group: SpatialAnalyst
+
+      Group: Theme  {
+
+         File: LabelImageCell  (SuperMap\REST\Theme\LabelImageCell.js)
+         File: LabelMatrixCell  (SuperMap\REST\Theme\LabelMatrixCell.js)
+         File: LabelMixedTextStyle  (SuperMap\REST\Theme\LabelMixedTextStyle.js)
+         File: LabelSymbolCell  (SuperMap\REST\Theme\LabelSymbolCell.js)
+         File: LabelThemeCell  (SuperMap\REST\Theme\LabelThemeCell.js)
+         File: Theme  (SuperMap\REST\Theme\Theme.js)
+         File: ThemeDotDensity  (SuperMap\REST\Theme\ThemeDotDensity.js)
+         File: ThemeEventArgs  (SuperMap\REST\Theme\ThemeEventArgs.js)
+         File: ThemeFlow  (SuperMap\REST\Theme\ThemeFlow.js)
+         File: ThemeGraduatedSymbol  (SuperMap\REST\Theme\ThemeGraduatedSymbol.js)
+         File: ThemeGraduatedSymbolStyle  (SuperMap\REST\Theme\ThemeGraduatedSymbolStyle.js)
+         File: ThemeGraph  (SuperMap\REST\Theme\ThemeGraph.js)
+         File: ThemeGraphAxes  (SuperMap\REST\Theme\ThemeGraphAxes.js)
+         File: ThemeGraphItem  (SuperMap\REST\Theme\ThemeGraphItem.js)
+         File: ThemeGraphSize  (SuperMap\REST\Theme\ThemeGraphSize.js)
+         File: ThemeGraphText  (SuperMap\REST\Theme\ThemeGraphText.js)
+         File: ThemeGridRange  (SuperMap\REST\Theme\ThemeGridRange.js)
+         File: ThemeGridRangeItem  (SuperMap\REST\Theme\ThemeGridRangeItem.js)
+         File: ThemeGridUnique  (SuperMap\REST\Theme\ThemeGridUnique.js)
+         File: ThemeGridUniqueItem  (SuperMap\REST\Theme\ThemeGridUniqueItem.js)
+         File: ThemeLabel  (SuperMap\REST\Theme\ThemeLabel.js)
+         File: ThemeLabelAlongLine  (SuperMap\REST\Theme\ThemeLabelAlongLine.js)
+         File: ThemeLabelBackground  (SuperMap\REST\Theme\ThemeLabelBackground.js)
+         File: ThemeLabelItem  (SuperMap\REST\Theme\ThemeLabelItem.js)
+         File: ThemeLabelText  (SuperMap\REST\Theme\ThemeLabelText.js)
+         File: ThemeMemoryData  (SuperMap\REST\Theme\ThemeMemoryData.js)
+         File: ThemeOffset  (SuperMap\REST\Theme\ThemeOffset.js)
+         File: ThemeParameters  (SuperMap\REST\Theme\ThemeParameters.js)
+         File: ThemeRange  (SuperMap\REST\Theme\ThemeRange.js)
+         File: ThemeRangeItem  (SuperMap\REST\Theme\ThemeRangeItem.js)
+         File: ThemeResult  (SuperMap\REST\Theme\ThemeResult.js)
+         File: ThemeService  (SuperMap\REST\Theme\ThemeService.js)
+         File: ThemeUnique  (SuperMap\REST\Theme\ThemeUnique.js)
+         File: ThemeUniqueItem  (SuperMap\REST\Theme\ThemeUniqueItem.js)
+         }  # Group: Theme
+
+      Group: TrafficTransferAnalyst  {
+
+         File: StopQueryEventArgs  (SuperMap\REST\TrafficTransferAnalyst\StopQueryEventArgs.js)
+         File: StopQueryParameters  (SuperMap\REST\TrafficTransferAnalyst\StopQueryParameters.js)
+         File: StopQueryResult  (SuperMap\REST\TrafficTransferAnalyst\StopQueryResult.js)
+         File: StopQueryService  (SuperMap\REST\TrafficTransferAnalyst\StopQueryService.js)
+         File: TransferGuide  (SuperMap\REST\TrafficTransferAnalyst\TransferGuide.js)
+         File: TransferGuideItem  (SuperMap\REST\TrafficTransferAnalyst\TransferGuideItem.js)
+         File: TransferLine  (SuperMap\REST\TrafficTransferAnalyst\TransferLine.js)
+         File: TransferLines  (SuperMap\REST\TrafficTransferAnalyst\TransferLines.js)
+         File: TransferPathEventArgs  (SuperMap\REST\TrafficTransferAnalyst\TransferPathEventArgs.js)
+         File: TransferPathParameters  (SuperMap\REST\TrafficTransferAnalyst\TransferPathParameters.js)
+         File: TransferPathResult  (SuperMap\REST\TrafficTransferAnalyst\TransferPathResult.js)
+         File: TransferPathService  (SuperMap\REST\TrafficTransferAnalyst\TransferPathService.js)
+         File: TransferSolution  (SuperMap\REST\TrafficTransferAnalyst\TransferSolution.js)
+         File: TransferSolutionEventArgs  (SuperMap\REST\TrafficTransferAnalyst\TransferSolutionEventArgs.js)
+         File: TransferSolutionParameters  (SuperMap\REST\TrafficTransferAnalyst\TransferSolutionParameters.js)
+         File: TransferSolutionResult  (SuperMap\REST\TrafficTransferAnalyst\TransferSolutionResult.js)
+         File: TransferSolutionService  (SuperMap\REST\TrafficTransferAnalyst\TransferSolutionService.js)
+         File: TransferStopInfo  (SuperMap\REST\TrafficTransferAnalyst\TransferStopInfo.js)
+         }  # Group: TrafficTransferAnalyst
+
+      }  # Group: REST
+
+   Group: Request  {
+
+      File: Request  (no auto-title, SuperMap\Request.js)
+      File: XMLHttpRequest  (no auto-title, SuperMap\Request\XMLHttpRequest.js)
+      }  # Group: Request
+
+   Group: Strategy  {
+
+      File: Strategy  (no auto-title, SuperMap\Strategy.js)
+      File: BBOX  (no auto-title, SuperMap\Strategy\BBOX.js)
+      }  # Group: Strategy
+
+   Group: Feature  {
+
+      File: Feature  (no auto-title, SuperMap\Feature.js)
+      File: Vector  (no auto-title, SuperMap\Feature\Vector.js)
+      }  # Group: Feature
+
+   Group: Tile  {
+
+      File: Tile  (no auto-title, SuperMap\Tile.js)
+      File: Image  (no auto-title, SuperMap\Tile\Image.js)
+      }  # Group: Tile
+
+   Group: SuperMap  {
+
+      File: BaseTypes  (SuperMap\BaseTypes.js)
+      File: Event  (no auto-title, SuperMap\Events.js)
+      File: Icon  (no auto-title, SuperMap\Icon.js)
+      File: Kinetic  (no auto-title, SuperMap\Kinetic.js)
+      File: Lang  (no auto-title, SuperMap\Lang.js)
+      File: Map  (no auto-title, SuperMap\Map.js)
+      File: Marker  (no auto-title, SuperMap\Marker.js)
+      File: Projection  (no auto-title, SuperMap\Projection.js)
+      File: Rule  (no auto-title, SuperMap\Rule.js)
+      File: Style  (no auto-title, SuperMap\Style.js)
+      File: StyleMap  (no auto-title, SuperMap\StyleMap.js)
+      File: Symbolizer  (no auto-title, SuperMap\Symbolizer.js)
+      File: Tween  (no auto-title, SuperMap\Tween.js)
+      File: Util  (no auto-title, SuperMap\Util.js)
+      File: Lang["en"]  (no auto-title, Lang\en.js)
+      File: Lang["zh-CN"]  (no auto-title, Lang\zh-CN.js)
+      }  # Group: SuperMap
+
+   Group: Symbolizer  {
+
+      File: Line  (SuperMap\Symbolizer\Line.js)
+      File: Point  (SuperMap\Symbolizer\Point.js)
+      File: Polygon  (SuperMap\Symbolizer\Polygon.js)
+      File: Raster  (SuperMap\Symbolizer\Raster.js)
+      File: Text  (SuperMap\Symbolizer\Text.js)
+      }  # Group: Symbolizer
+
+   }  # Group: SuperMap
+
+Group: Index  {
+
+   Index: Everything
+   Class Index: Classes
+   Constant Index: Constants
+   File Index: Files
+   Function Index: Functions
+   Property Index: Properties
+   Constructor Index: Constructor
+   Variable Index: Variables
+   }  # Group: Index
+
