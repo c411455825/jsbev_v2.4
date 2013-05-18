@@ -1,0 +1,86 @@
+Format: 1.52
+
+
+Title: SuperMap JSBev
+SubTitle: JSBev控件API
+
+Footer: 北京超图软件股份有限公司
+Timestamp: 更新于 10/28/2012
+#   m     - One or two digit month.  January is "1"
+#   mm    - Always two digit month.  January is "01"
+#   mon   - Short month word.  January is "Jan"
+#   month - Long month word.  January is "January"
+#   d     - One or two digit day.  1 is "1"
+#   dd    - Always two digit day.  1 is "01"
+#   day   - Day with letter extension.  1 is "1st"
+#   yy    - Two digit year.  2006 is "06"
+#   yyyy  - Four digit year.  2006 is "2006"
+#   year  - Four digit year.  2006 is "2006"
+
+
+# --------------------------------------------------------------------------
+# 
+# Cut and paste the lines below to change the order in which your files
+# appear on the menu.  Don't worry about adding or removing files, Natural
+# Docs will take care of that.
+# 
+# You can further organize the menu by grouping the entries.  Add a
+# "Group: [name] {" line to start a group, and add a "}" to end it.
+# 
+# You can add text and web links to the menu by adding "Text: [text]" and
+# "Link: [name] ([URL])" lines, respectively.
+# 
+# The formatting and comments are auto-generated, so don't worry about
+# neatness when editing the file.  Natural Docs will clean it up the next
+# time it is run.  When working with groups, just deal with the braces and
+# forget about the indentation and comments.
+# 
+# You can use this file on other computers even if they use different
+# directories.  As long as the command line points to the same source files,
+# Natural Docs will be able to correct the locations automatically.
+# 
+# --------------------------------------------------------------------------
+
+
+Group: Controls  {
+
+   Group: Controls  {
+
+      File: Accordion  (D:\SuperMap\smiserver_java_613_9709_3283_x86_chs_zip\webapps\jsbev_v1\demo\js\controls\sm_accordion.js)
+      File: Class  (D:\SuperMap\smiserver_java_613_9709_3283_x86_chs_zip\webapps\jsbev_v1\demo\js\controls\sm_class.js)
+      File: DataTable  (D:\SuperMap\smiserver_java_613_9709_3283_x86_chs_zip\webapps\jsbev_v1\demo\js\controls\sm_dataTable.js)
+      File: Dialog  (D:\SuperMap\smiserver_java_613_9709_3283_x86_chs_zip\webapps\jsbev_v1\demo\js\controls\sm_dialog.js)
+      File: DrawFeature  (D:\SuperMap\smiserver_java_613_9709_3283_x86_chs_zip\webapps\jsbev_v1\demo\js\controls\sm_drawFeature.js)
+      File: Geolocate  (D:\SuperMap\smiserver_java_613_9709_3283_x86_chs_zip\webapps\jsbev_v1\demo\js\controls\sm_geolocate.js)
+      File: Icon  (D:\SuperMap\smiserver_java_613_9709_3283_x86_chs_zip\webapps\jsbev_v1\demo\js\controls\sm_icon.js)
+      File: Measure  (D:\SuperMap\smiserver_java_613_9709_3283_x86_chs_zip\webapps\jsbev_v1\demo\js\controls\sm_measure.js)
+      File: Menu  (D:\SuperMap\smiserver_java_613_9709_3283_x86_chs_zip\webapps\jsbev_v1\demo\js\controls\sm_menu.js)
+      File: MenuPanel  (D:\SuperMap\smiserver_java_613_9709_3283_x86_chs_zip\webapps\jsbev_v1\demo\js\controls\sm_menupanel.js)
+      File: Tooltip  (D:\SuperMap\smiserver_java_613_9709_3283_x86_chs_zip\webapps\jsbev_v1\demo\js\controls\sm_tooltip.js)
+      File: Util  (D:\SuperMap\smiserver_java_613_9709_3283_x86_chs_zip\webapps\jsbev_v1\demo\js\controls\sm_util.js)
+      }  # Group: Controls
+
+   Group: Templete  {
+
+      File: Main  (D:\SuperMap\smiserver_java_613_9709_3283_x86_chs_zip\webapps\jsbev_v1\demo\js\templete1\sm_bev_main.js)
+      File: Theme  (no auto-title, D:\SuperMap\smiserver_java_613_9709_3283_x86_chs_zip\webapps\jsbev_v1\demo\js\templete1\sm_theme.js)
+      File: WidgetControl  (no auto-title, D:\SuperMap\smiserver_java_613_9709_3283_x86_chs_zip\webapps\jsbev_v1\demo\js\templete1\sm_widgetcontrol.js)
+      }  # Group: Templete1
+
+   }  # Group: Controls
+
+Group: Index  {
+
+   Index: Everything
+   Class Index: Classes
+   File Index: Files
+   Function Index: Functions
+   Property Index: Properties
+   Constructor Index: Constructor
+   }  # Group: Index
+
+
+
+##### Do not change or remove these lines. #####
+Data: 1(D333BwbrNIGHPpIb6E86GH/GHVlp/pVSDTVkq2kVThJTVsJSV9R6Vj8Ib7GYpII6bl6YG/V/DbfGEubl6b9u\tHuo6)
+Data: 1(h333BwbrNIGHPpIb6E86GH/GHVlp/pVSDTVkq2kVThJTVsJSV9R6Vj8Ib7GYpII6bl6YG/V/DbfGEubl6btGEIoGtGD)
