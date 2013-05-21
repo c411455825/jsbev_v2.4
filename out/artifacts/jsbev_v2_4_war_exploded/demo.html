@@ -48,7 +48,6 @@
                     }
                 );
                  layer0 = new SuperMap.Layer.CloudLayer();
-
                 map.addLayer(layer0);
                 map.setCenter(new SuperMap.LonLat(0 , 0) , 4);
             })
@@ -56,12 +55,14 @@
         var myWidgetControl,myMenuPanel,myMeasure,myNavigation,myGeolocate,myDrawFeature;
         function initDemo(){
             myWidgetControl = new SuperMap.Bev.WidgetControl("#widgetControl");
-            myMenuPanel = new SuperMap.Bev.MenuPanel($("#toolbar"),{
+            myMenuPanel = new SuperMap.Bev.MenuPanel({
+                "body":$("#toolbar"),
                 "tree":[
                     {
                         "icon":SuperMap.Bev.Util.getImgPath("tool_20_20.png"),
                         "title":"基本操作",
-                        "menu":new SuperMap.Bev.Menu(null,{
+                        "menu":new SuperMap.Bev.Menu({
+                            "body":null,
                             "tree":[
                                 {
                                     "icon":SuperMap.Bev.Util.getImgPath("mesure_16_16.png"),
@@ -77,9 +78,7 @@
                                                 var contentBody = dialog.getContentBody();
                                                 myMeasure = new SuperMap.Bev.Measure({
                                                     "body":contentBody,
-                                                    "map":map,
-                                                    "distanceIcon":SuperMap.Bev.Util.getImgPath("measureDistance_16_16.png"),
-                                                    "areaIcon":SuperMap.Bev.Util.getImgPath("measureArea_16_16.png")
+                                                    "map":map
                                                 });
                                                 dialog.on("dialogclose", function () {
                                                     if (myMeasure) {
@@ -107,9 +106,7 @@
                                                 var contentBody = dialog.getContentBody();
                                                 myGeolocate = new SuperMap.Bev.Geolocate({
                                                     "body":contentBody,
-                                                    "map":map,
-                                                    "locationIcon":SuperMap.Bev.Util.getImgPath("geolocate_16_16.png"),
-                                                    "clearIcon":SuperMap.Bev.Util.getImgPath("clear_16_16.png")
+                                                    "map":map
                                                 });
                                                 dialog.on("dialogclose", function () {
                                                     if (myGeolocate) {
@@ -137,11 +134,7 @@
                                                 var contentBody = dialog.getContentBody();
                                                 myDrawFeature = new SuperMap.Bev.DrawFeature({
                                                     "body":contentBody,
-                                                    "map":map,
-                                                    "pointIcon":SuperMap.Bev.Util.getImgPath("drawpoint_16_16.png"),
-                                                    "lineIcon":SuperMap.Bev.Util.getImgPath("drawline_16_16.png"),
-                                                    "areaIcon":SuperMap.Bev.Util.getImgPath("drawarea_16_16.png"),
-                                                    "clearIcon":SuperMap.Bev.Util.getImgPath("clear_16_16.png")
+                                                    "map":map
                                                 });
                                                 dialog.on("dialogclose", function () {
                                                     if (myDrawFeature) {

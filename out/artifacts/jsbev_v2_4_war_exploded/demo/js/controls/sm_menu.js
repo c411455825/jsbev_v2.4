@@ -12,38 +12,35 @@
              */
             body:null,
             /**
-             * APIProperty: config
-             * {Object} 初始化所需的参数
+             * APIProperty: tree
+             * {Array} 目录结构
              *
              *(code)
-             * config:{
-             *     "tree":[
-             *         {
-             *              "icon":"className",
-             *              "text":"标题",
-             *              "events":{
-             *                  "click":function(){},
-             *                  "mouseover":function(){},
-             *                  "mouseout":function(){}
-             *              }
+             * "tree":[
+             *     {
+             *          "icon":"imagePath",
+             *          "hover_icon":"imagePath"
+             *          "text":"标题",
+             *          "events":{
+             *              "click":function(){},
+             *              "mouseover":function(){},
+             *              "mouseout":function(){}
              *          }
-             *      ]
-             * },
+             *      }
+             *  ]
              * (end)
              */
-            config:{
-                "tree":[
-                    {
-                        "icon":"",
-                        "text":"test",
-                        "events":{
-                            "click":null,
-                            "mouseover":null,
-                            "mouseout":null
-                        }
+            tree:[
+                {
+                    "icon":"",
+                    "text":"test",
+                    "events":{
+                        "click":null,
+                        "mouseover":null,
+                        "mouseout":null
                     }
-                ]
-            },
+                }
+            ],
             /**
              * APIProperty: menuBody
              * {HTMLElement} 内容区域
@@ -55,28 +52,29 @@
              * 实例化 Menu 类。
              *
              * Parameters:
-             * body - {HTMLElement} 父容器
-             * config - {Object} 需要展现的内容
-             * head - {Object} 初始化所需的参数
+             * options {Object} 初始化需要的参数
              *
              * Examples:
              * (code)
-             * var myMenu = new SuperMap.Bev.Menu($("#id"),{
-             *      "tree":[
+             * var myMenu = new SuperMap.Bev.Menu({
+             *     "body":$("#id"),
+             *     "tree":[
              *          {
-             *              "icon":"measure_16_16",
+             *              "icon":"imagePath",
+             *              "hover_icon":"imagePath"
              *              "text":"量&nbsp;&nbsp;&nbsp;&nbsp;算",
              *              "events":{
              *                  "click":function(){}
              *              }
              *          }
              *      ]
-             *  })
+             * });
              * (end)
              */
-            "init":function (body1, config1) {
-                this.body = body1;
-                this.config = config1;
+            init:function (options) {
+                for(var key in options){
+                   this[key] = options[key];
+                }
                 var ul;
 
                 this.menuBody = ul = this.createMenu();
@@ -89,16 +87,20 @@
              * 创建该控件的dom对象。
              */
             createMenu:function () {
-                var ul, li, tree = this.config.tree, para, itemArr = [], itm;
+                var ul, li,li_icon,li_text, tree = this.tree, para, itemArr = [], itm;
 
                 ul = $("<ul class=\"sm_menu\"></ul>");
                 for (var i = 0; i < tree.length; i++) {
                     para = tree[i];
-                    li = $("<li class=\"sm_menu_li\"><a href=\"#\"><span class=\"icon16_16\" style=\"background: url(" + para.icon + ")\"></span><span class=\"menu_txt\">" + para.text + "</span></a></li>")
+                    li = $("<li class=\"sm_menu_li\"><a href=\"#\"></a></li>")
                         .appendTo(ul);
-
+                    li_icon = $("<span class=\"icon16_16\" style=\"background: url(" + para.icon + ")\"></span>")
+                        .appendTo(li.find("a"));
+                    li_text = $("<span class=\"menu_txt\">" + para.text + "</span>")
+                        .appendTo(li.find("a"));
                     itemArr.push({
-                        "li":li
+                        "li":li,
+                        "li_icon":li_icon
                     })
                     li.children("a").css({"border":"0px solid #fff"});
                 }
@@ -130,7 +132,7 @@
              * 绑定事件。
              */
             bindEvents:function () {
-                var itmArr = this.itemArray, itm, trrArr = this.config.tree, eventArr;
+                var itmArr = this.itemArray, itm, me=this,trrArr = this.tree, eventArr;
 
                 for (var i = 0; i < itmArr.length; i++) {
                     itm = itmArr[i].li;
@@ -143,19 +145,30 @@
                             }
                         }(eventArr.click));
                     }
-                    if (eventArr.mouseover) {
-                        itm.mouseover(function (mo) {
+                    if (eventArr.mouseover||trrArr[i].hover_icon) {
+                        itm.mouseover(function (mo,i) {
                             return function () {
-                                mo();
+                                if(mo)mo();
+                                log.print("menu over");
+                                if(me.tree[i]&&me.tree[i].hover_icon){
+                                     me.itemArray[i].li_icon.css({
+                                         "background":"url("+me.tree[i].hover_icon+")"
+                                     });
+                                }
                             }
-                        }(eventArr.mouseover))
+                        }(eventArr.mouseover,i))
                     }
-                    if (eventArr.mouseout) {
-                        itm.mouseout(function (mo) {
+                    if (eventArr.mouseout||trrArr[i].hover_icon) {
+                        itm.mouseout(function (mo,i) {
                             return function () {
-                                mo();
+                                if(mo)mo();
+                                if(me.tree[i]&&me.tree[i].hover_icon){
+                                    me.itemArray[i].li_icon.css({
+                                        "background":"url("+me.tree[i].icon+")"
+                                    });
+                                }
                             }
-                        }(eventArr.mouseout))
+                        }(eventArr.mouseout,i))
                     }
                 }
             },

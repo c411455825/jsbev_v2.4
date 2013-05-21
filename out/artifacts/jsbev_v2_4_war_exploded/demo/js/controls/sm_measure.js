@@ -22,30 +22,40 @@
              */
             distanceIcon:null,
             /**
-             * APIProperty: distanceIconOffsetX
+             * APIProperty: h_distanceIcon
+             * {String} 距离量算hover图标的路径
+             */
+            h_distanceIcon:null,
+            /**
+             * Property: distanceIconOffsetX
              * {Number} 距离量算图标x偏移量
              */
-            distanceIconOffsetX:null,
+            //distanceIconOffsetX:null,
             /**
-             * APIProperty: distanceIconOffsetY
+             * Property: distanceIconOffsetY
              * {Number} 距离量算图标y偏移量
              */
-            distanceIconOffsetY:null,
+            //distanceIconOffsetY:null,
             /**
              * APIProperty: areaIcon
              * {String} 面积量算图标路径
              */
             areaIcon:null,
             /**
-             * APIProperty: areaIconOffsetX
+             * APIProperty: h_areaIcon
+             * {String} 面积量算hover图标路径
+             */
+            h_areaIcon:null,
+            /**
+             * Property: areaIconOffsetX
              * {Number} 面积量算图标x偏移量
              */
-            areaIconOffsetX:null,
+            //areaIconOffsetX:null,
             /**
-             * APIProperty: areaIconOffsetY
+             * Property: areaIconOffsetY
              * {Number} 面积量算图标y偏移量
              */
-            areaIconOffsetY:null,
+            //areaIconOffsetY:null,
             /**
              * APIProperty: resultDiv
              * {HTMLElement} 结果显示面板
@@ -75,6 +85,10 @@
              * (end)
              */
             init:function (option) {
+                this.distanceIcon = SuperMap.Bev.Util.getImgPath("measureDistance_16_16.png");
+                this.h_distanceIcon = SuperMap.Bev.Util.getImgPath("h_measureDistance_16_16.png");
+                this.areaIcon = SuperMap.Bev.Util.getImgPath("measureArea_16_16.png");
+                this.h_areaIcon = SuperMap.Bev.Util.getImgPath("h_measureArea_16_16.png");
                 for(var key in option){
                     this[key] = option[key];
                 }
@@ -100,12 +114,29 @@
                             }
                         });
 
+                    var btn1 = d2.button("option","buttonElement");
+                    var icon = btn1.children(".ui-icon");
                     if(this.distanceIcon){
-                        var btn1 = d2.button("option","buttonElement");
-                        var icon = btn1.children(".ui-icon");
                         icon.css({
-                            "background":"url("+this.distanceIcon+") "+(this.distanceIconOffsetX==null?0:this.distanceIconOffsetX)+"px "+(this.distanceIconOffsetY==null?0:this.distanceIconOffsetY)+"px"
+                            "background":"url("+this.distanceIcon+")"
                         });
+                    }
+
+                    if(this.h_distanceIcon){
+                        d2.mouseover(function(icon){
+                           return function(){
+                               icon.css({
+                                   "background":"url("+me.h_distanceIcon+")"
+                               });
+                           }
+                        }(icon))
+                            .mouseout(function(icon){
+                               return function(){
+                                   icon.css({
+                                       "background":"url("+me.distanceIcon+") "
+                                   });
+                               }
+                            }(icon));
                     }
 
                     d3 = $("<button>面积量算</button>").button({
@@ -116,12 +147,30 @@
                             me.measureArea();
                         }).appendTo(this.body);
 
+                    var btn = d3.button("option","buttonElement");
+                    var icon = btn.children(".ui-icon");
+
                     if(this.areaIcon){
-                        var btn = d3.button("option","buttonElement");
-                        var icon = btn.children(".ui-icon");
                         icon.css({
-                            "background":"url("+this.areaIcon+") "+(this.areaIconOffsetX==null?0:this.areaIconOffsetX)+"px "+(this.areaIconOffsetY==null?0:this.areaIconOffsetY)+"px"
+                            "background":"url("+this.areaIcon+")"
                         });
+                    }
+
+                    if(this.h_areaIcon){
+                        d3.mouseover(function(icon){
+                                return function(){
+                                    icon.css({
+                                        "background":"url("+me.h_areaIcon+")"
+                                    });
+                                }
+                            }(icon))
+                            .mouseout(function(icon){
+                                return function(){
+                                    icon.css({
+                                        "background":"url("+me.areaIcon+") "
+                                    });
+                                }
+                            }(icon));
                     }
 
                     window.setTimeout(function(){

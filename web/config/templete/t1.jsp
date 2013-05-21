@@ -62,17 +62,21 @@ if(bevCtrl==null)bevCtrl="1_2_3";
         var myWidgetControl,myMenuPanel,myMeasure,myNavigation,myGeolocate,myDrawFeature;
         function initDemo(){
             myWidgetControl = new SuperMap.Bev.WidgetControl("#widgetControl");
-            myMenuPanel = new SuperMap.Bev.MenuPanel($("#toolbar"),{
+            myMenuPanel = new SuperMap.Bev.MenuPanel({
+                "body":$("#toolbar"),
                 "tree":[
 					<%if(bevCtrl.indexOf("0")<0){%>
                     {
                         "icon":SuperMap.Bev.Util.getImgPath("tool_20_20.png"),
+                        "hover_icon":SuperMap.Bev.Util.getImgPath("h_tool_20_20.png"),
                         "title":"基本操作",
-                        "menu":new SuperMap.Bev.Menu(null,{
+                        "menu":new SuperMap.Bev.Menu({
+                            "body":null,
                             "tree":[
 								<%if(bevCtrl.indexOf("1")>=0){%>
                                 {
                                     "icon":SuperMap.Bev.Util.getImgPath("mesure_16_16.png"),
+                                    "hover_icon":SuperMap.Bev.Util.getImgPath("h_mesure_16_16.png"),
                                     "text":"量&nbsp;&nbsp;&nbsp;&nbsp;算",
                                     "events":{
                                         "click":function () {
@@ -85,9 +89,7 @@ if(bevCtrl==null)bevCtrl="1_2_3";
                                                 var contentBody = dialog.getContentBody();
                                                 myMeasure = new SuperMap.Bev.Measure({
                                                     "body":contentBody,
-                                                    "map":map,
-                                                    "distanceIcon":SuperMap.Bev.Util.getImgPath("measureDistance_16_16.png"),
-                                                    "areaIcon":SuperMap.Bev.Util.getImgPath("measureArea_16_16.png")
+                                                    "map":map
                                                 });
                                                 dialog.on("dialogclose", function () {
                                                     if (myMeasure) {
@@ -106,6 +108,7 @@ if(bevCtrl==null)bevCtrl="1_2_3";
 								<%if(bevCtrl.indexOf("2")>=0){%>
                                 {
                                     "icon":SuperMap.Bev.Util.getImgPath("geolocate_16_16.png"),
+                                    "hover_icon":SuperMap.Bev.Util.getImgPath("h_geolocate_16_16.png"),
                                     "text":"定&nbsp;&nbsp;&nbsp;&nbsp;位",
                                     "events":{
                                         "click":function () {
@@ -118,9 +121,7 @@ if(bevCtrl==null)bevCtrl="1_2_3";
                                                 var contentBody = dialog.getContentBody();
                                                 myGeolocate = new SuperMap.Bev.Geolocate({
                                                     "body":contentBody,
-                                                    "map":map,
-                                                    "locationIcon":SuperMap.Bev.Util.getImgPath("geolocate_16_16.png"),
-                                                    "clearIcon":SuperMap.Bev.Util.getImgPath("clear_16_16.png")
+                                                    "map":map
                                                 });
                                                 dialog.on("dialogclose", function () {
                                                     if (myGeolocate) {
@@ -139,6 +140,7 @@ if(bevCtrl==null)bevCtrl="1_2_3";
 								<%if(bevCtrl.indexOf("3")>=0){%>
                                 {
                                     "icon":SuperMap.Bev.Util.getImgPath("draw_16_16.png"),
+                                    "hover_icon":SuperMap.Bev.Util.getImgPath("h_draw_16_16.png"),
                                     "text":"绘&nbsp;&nbsp;&nbsp;&nbsp;制",
                                     "events":{
                                         "click":function () {
@@ -151,11 +153,7 @@ if(bevCtrl==null)bevCtrl="1_2_3";
                                                 var contentBody = dialog.getContentBody();
                                                 myDrawFeature = new SuperMap.Bev.DrawFeature({
                                                     "body":contentBody,
-                                                    "map":map,
-                                                    "pointIcon":SuperMap.Bev.Util.getImgPath("drawpoint_16_16.png"),
-                                                    "lineIcon":SuperMap.Bev.Util.getImgPath("drawline_16_16.png"),
-                                                    "areaIcon":SuperMap.Bev.Util.getImgPath("drawarea_16_16.png"),
-                                                    "clearIcon":SuperMap.Bev.Util.getImgPath("clear_16_16.png")
+                                                    "map":map
                                                 });
                                                 dialog.on("dialogclose", function () {
                                                     if (myDrawFeature) {
@@ -242,4 +240,5 @@ if(bevCtrl==null)bevCtrl="1_2_3";
         $(window).resize(a);
     })();
 </script>
+<script src="log.js"></script>
 </html>

@@ -25,16 +25,22 @@
             locationIcon:null,
 
             /**
-             * APIProperty: locationIconOffsetX
-             * {Number} 定位按钮图标x方向偏移量
+             * APIProperty: h_locationIcon
+             * {String} 定位按钮hover图标路径
              */
-            locationIconOffsetX:null,
+            h_locationIcon:null,
 
             /**
-             * APIProperty: locationIconOffsetY
+             * Property: locationIconOffsetX
+             * {Number} 定位按钮图标x方向偏移量
+             */
+            //locationIconOffsetX:null,
+
+            /**
+             * Property: locationIconOffsetY
              * {Number} 定位按钮图标y方向偏移量
              */
-            locationIconOffsetY:null,
+            //locationIconOffsetY:null,
 
             /**
              * APIProperty: clearIcon
@@ -43,16 +49,22 @@
             clearIcon:null,
 
             /**
-             * APIProperty: clearIconOffsetX
-             * {Number} 清除按钮图标x方向偏移量
+             * APIProperty: h_clearIcon
+             * {String} 清除按钮hover图标路径
              */
-            clearIconOffsetX:null,
+            h_clearIcon:null,
 
             /**
-             * APIProperty: clearIconOffsetY
+             * Property: clearIconOffsetX
+             * {Number} 清除按钮图标x方向偏移量
+             */
+            //clearIconOffsetX:null,
+
+            /**
+             * Property: clearIconOffsetY
              * {Number} 清除按钮图标y方向偏移量
              */
-            clearIconOffsetY:null,
+            //clearIconOffsetY:null,
 
             /**
              * Property: geoMarker_bev
@@ -82,6 +94,11 @@
              * (end)
              */
             init:function (option) {
+                this.locationIcon = SuperMap.Bev.Util.getImgPath("geolocate_16_16.png");
+                this.h_locationIcon = SuperMap.Bev.Util.getImgPath("h_geolocate_16_16.png");
+                this.clearIcon = SuperMap.Bev.Util.getImgPath("clear_16_16.png");
+                this.h_clearIcon = SuperMap.Bev.Util.getImgPath("h_clear_16_16.png");
+
                 for(var key in option){
                     this[key] = option[key];
                 }
@@ -107,12 +124,29 @@
                             me.geolocateMe();
                         }).appendTo(this.body);
 
+                    var btn = b1.button("option","buttonElement");
+                    var icon = btn.children(".ui-icon");
                     if(this.locationIcon){
-                        var btn = b1.button("option","buttonElement");
-                        var icon = btn.children(".ui-icon");
                         icon.css({
-                            "background":"url("+this.locationIcon+") "+(this.locationIconOffsetX==null?0:this.locationIconOffsetX)+"px "+(this.locationIconOffsetY==null?0:this.locationIconOffsetY)+"px"
+                            "background":"url("+this.locationIcon+")"
                         });
+                    }
+
+                    if(this.h_locationIcon){
+                        b1.mouseover(function(icon){
+                           return function(){
+                               icon.css({
+                                   "background":"url("+me.h_locationIcon+")"
+                               });
+                           }
+                        }(icon))
+                            .mouseout(function(icon){
+                               return function(){
+                                   icon.css({
+                                       "background":"url("+me.locationIcon+")"
+                                   });
+                               }
+                            }(icon));
                     }
 
                     b2 = $("<button>清除标记</button>").button({
@@ -123,12 +157,29 @@
                             me.clearGeoMarkers();
                         }).appendTo(this.body);
 
+                    var btn1 = b2.button("option","buttonElement");
+                    var icon = btn1.children(".ui-icon");
                     if(this.clearIcon){
-                        var btn1 = b2.button("option","buttonElement");
-                        var icon = btn1.children(".ui-icon");
                         icon.css({
-                            "background":"url("+this.clearIcon+") "+(this.clearIconOffsetX==null?0:this.clearIconOffsetX)+"px "+(this.clearIconOffsetY==null?0:this.clearIconOffsetY)+"px"
+                            "background":"url("+this.clearIcon+")"
                         });
+                    }
+
+                    if(this.h_clearIcon){
+                        b2.mouseover(function(icon){
+                            return function(){
+                                icon.css({
+                                    "background":"url("+me.h_clearIcon+")"
+                                });
+                            }
+                        }(icon))
+                            .mouseout(function(icon){
+                                 return function(){
+                                     icon.css({
+                                         "background":"url("+me.clearIcon+")"
+                                     });
+                                 }
+                            }(icon));
                     }
 
                     window.setTimeout(function(){

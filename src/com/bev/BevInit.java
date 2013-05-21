@@ -36,12 +36,10 @@ public class BevInit extends HttpServlet implements ServletContextListener{
 		log=Logger.getLogger(BevMain.class.getName());
 		log.info("teste*********************************88");
 		log.log(Level.DEBUG, "testetetetefegfergregre---------999999999999");
-		
-		
 	}
 	
 	public void contextDestroyed(ServletContextEvent sce) {
-		   //用于在容器关闭时,操作
+
 	}
 
 	/**

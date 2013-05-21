@@ -7,74 +7,67 @@
         "SuperMap.Bev.MenuPanel",
         {
             /**
-             * APIProperty: config
-             * {Object} 初始化所需的参数
+             * APIProperty: tree
+             * {Array} 目录结构
              *
              *(code)
-             * config:{
-             *     "tree":[
-             *         {
-             *              "icon":"className",
-             *              "title":"标题",
-             *              "menu":new SuperMap.Bev.Menu()//$("<div>").html("this is a div")
-             *          }
-             *      ]
-             * },
+             * "tree":[
+             *     {
+             *         "icon":"imagepath",
+             *         "hover_icon":"imagepath",
+             *         "title":"标题",
+             *         "menu":new SuperMap.Bev.Menu()//$("<div>").html("this is a div")
+             *      }
+             * ]
              * (end)
              */
-            "config":null,
+            tree:null,
             /**
              * APIProperty: body
              * {HTMLElement} 父容器
              */
-            "body":null,
+            body:null,
             /**
              * Property: tabBody
              * {HTMLElement} tab按钮dom对象
              */
-            "tabBody":null,
+            tabBody:null,
             /**
              * Property: tab_array
              * {Array<Object>} 存储每个tab按钮相关信息的数组
              */
-            "tab_array":[],
+            tab_array:[],
             /**
              * Property: tabTimeout
              * {Object} 控制菜单延时显示隐藏
              */
-            "tabTimeout":{},
+            tabTimeout:{},
             /**
              * Constructor: SuperMap.Bev.MenuPanel
              * 实例化 MenuPanel 类。
              *
              * Parameters:
-             * body - {HTMLElement} 父容器
-             * config - {Object} 需要展现的内容
+             * options - {Object} 参数
              *
              * Examples:
              * (code)
-             * var  myMenuPanel = new SuperMap.Bev.MenuPanel($("#toolbar"),{
-             *      "tree":[
+             * var  myMenuPanel = new SuperMap.Bev.MenuPanel({
+             *     "body":$("#div"),
+             *     "tree":[
              *          {
-             *              "icon":"measure_icon",
+             *              "icon":"imagepath",
+             *              "hover_icon":"imagepath"
              *              "title":"基本操作",
              *              "menu":new SuperMap.Bev.Menu()//$("<div>").html("this is a div")
              *          }
              *      ]
-             *  })
+             * });
              * (end)
              */
-            init:function (body, config) {
-                this.config = config || {
-                    "tree":[
-                        {
-                            "icon":"",
-                            "title":"test",
-                            "menu":null
-                        }
-                    ]
-                };
-                this.body = body;
+            init:function (options) {
+                for(var key in options){
+                    this[key] = options[key];
+                }
                 var tab = this.createTab();
                 tab&&tab.appendTo(this.body);
                 this.bindEvents();
@@ -84,10 +77,10 @@
              * Method: createTab
              * 创建该控件的dom对象。
              */
-            "createTab":function () {
-                var tab, ul, tree, para, li, li_a, li_div;
+            createTab:function () {
+                var tab, ul, tree, para, li, li_a, li_div,li_icon,li_text;
 
-                tree = this.config.tree;
+                tree = this.tree;
                 if(!tree||tree.length==0)return;
                 this.tabBody = tab = $("<div class=\"sm_tabs\"></div>");
                 ul = $("<ul class=\"sm_tabs_ul\"></ul>")
@@ -98,7 +91,6 @@
                     });
                 $("<div style=\"display: none;\"><div id=\"tabs-1\"></div></div>").appendTo(tab);
 
-//                tree = this.config.tree;
                 for (var i = 0; i < tree.length; i++) {
                     para = tree[i];
 
@@ -107,8 +99,12 @@
                             "padding":"0px",
                             "margin":"0px"
                         });
-                    li_a = $("<a href=\"#tabs-1\"><span class=\"tab_icon\" style=\"background: url(" + para.icon + ")\"></span><span class=\"tab_txt\">" + para.title + "</span></a>")
+                    li_a = $("<a href=\"#tabs-1\"></a>")
                         .appendTo(li);
+                    li_icon = $("<span class=\"tab_icon\" style=\"background: url(" + para.icon + ")\"></span>")
+                        .appendTo(li_a);
+                    li_text = $("<span class=\"tab_txt\">" + para.title + "</span>")
+                        .appendTo(li_a);
                     li_div = $("<div style=\"position: absolute;left: 0px;top:46px;\"></div>")
                         .appendTo(li);
 
@@ -127,7 +123,8 @@
                     this.tab_array.push({
                         "li_a":li_a,
                         "menu":para.menu,
-                        "li":li
+                        "li":li,
+                        "li_icon":li_icon
                     });
                 }
 
@@ -143,16 +140,17 @@
              * Method: bindEvents
              * 绑定事件。
              */
-            "bindEvents":function () {
-                var tab_array = this.tab_array, tab, li_a, li, me = this, timeoutId, menu, menuItms, menuItm;
+            bindEvents:function () {
+                var tab_array = this.tab_array, tab, li_a, li, li_icon, me = this, timeoutId, menu, menuItms, menuItm;
                 for (var i = 0; i < tab_array.length; i++) {
                     tab = tab_array[i];
 
                     li_a = tab.li_a;
                     li = tab.li;
+                    li_icon = tab.li_icon
                     timeoutId = "tab_" + i + "_out";
                     menu = tab.menu;
-                    li_a.mouseover(function (timeoutId, menu) {
+                    li_a.mouseover(function (timeoutId, menu,i,li_icon) {
                         return function () {
                             if (!me.canelTimeout(timeoutId)) {
                                 me.hideAllMenu();
@@ -164,14 +162,20 @@
                                         menu.css("display", "block");
                                     }
                                 }
+                                if(me.tree[i]&&me.tree[i].hover_icon){
+                                    li_icon.css({
+                                        "background":"url("+me.tree[i].hover_icon+")"
+                                    });
+                                }
                             }
                         }
-                    }(timeoutId, menu))
-                        .mouseout(function (timeoutId, menu, li) {
+                    }(timeoutId, menu,i,li_icon))
+                        .mouseout(function (timeoutId, menu, li,i,li_icon) {
                         return function () {
-                            mouseout(timeoutId, menu, li);
+                            log.print("step4 i is:" + i);
+                            mouseout(timeoutId, menu, li, li_icon, i);
                         }
-                    }(timeoutId, menu, li))
+                    }(timeoutId, menu, li,i,li_icon))
                         .click(function (event) {
                             $(this).parent().removeClass("ui-state-active").removeClass("ui-state-focus");
                         });
@@ -193,19 +197,20 @@
                             return function () {
                                 me.canelTimeout(timeoutId);
                             }
-                        }(timeoutId)).mouseout(function (timeoutId, menu, li) {
+                        }(timeoutId)).mouseout(function (timeoutId, menu, li, i,li_icon) {
                             return function () {
-                                mouseout(timeoutId, menu, li);
+                                mouseout(timeoutId, menu, li, li_icon, i);
                             }
-                        }(timeoutId, menu, li))
+                        }(timeoutId, menu, li,i,li_icon))
                             .click(function () {
                                 return false;
                             });
                     }
                 }
 
-                function mouseout(timeoutId, menu, li) {
-                    me.createTimeout(timeoutId, function (timeoutId, menu, li) {
+                function mouseout(timeoutId, menu, li, li_icon, i) {
+                    log.print("step3 i is:" + i);
+                    me.createTimeout(timeoutId, function (timeoutId, menu, li, li_icon, i) {
                         return function () {
                             if(menu){
                                 if(menu.menuBody){
@@ -217,8 +222,15 @@
                             }
                             //menu && menu.menuBody.css("display", "none");
                             li.removeClass("ui-state-hover");
+                            log.print("step2 i is:" + i);
+                            if(me.tree[i]&&me.tree[i].hover_icon){
+                                log.print("step1 i is:" + i);
+                                li_icon.css({
+                                    "background":"url("+me.tree[i].icon+")"
+                                });
+                            }
                         }
-                    }(timeoutId, menu, li));
+                    }(timeoutId, menu, li, li_icon, i));
                 }
             },
             /**

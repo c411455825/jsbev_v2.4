@@ -25,16 +25,22 @@
             pointIcon:null,
 
             /**
-             * APIProperty: pointIconOffsetX
-             * {Number} 绘制点按钮图标X偏移量
+             * APIProperty: h_pointIcon
+             * {String} 绘制点按钮hover图标路径
              */
-            pointIconOffsetX:null,
+            h_pointIcon:null,
 
             /**
-             * APIProperty: pointIconOffsetY
+             * Property: pointIconOffsetX
+             * {Number} 绘制点按钮图标X偏移量
+             */
+            //pointIconOffsetX:null,
+
+            /**
+             * Property: pointIconOffsetY
              * {Number} 绘制点按钮图标Y偏移量
              */
-            pointIconOffsetY:null,
+            //pointIconOffsetY:null,
 
             /**
              * APIProperty: lineIcon
@@ -43,16 +49,22 @@
             lineIcon:null,
 
             /**
-             * APIProperty: lineIconOffsetX
-             * {Number} 绘制线按钮图标X偏移量
+             * APIProperty: h_lineIcon
+             * {String} 绘制线按钮hover图标路径
              */
-            lineIconOffsetX:null,
+            h_lineIcon:null,
 
             /**
-             * APIProperty: lineIconOffsetY
+             * Property: lineIconOffsetX
+             * {Number} 绘制线按钮图标X偏移量
+             */
+            //lineIconOffsetX:null,
+
+            /**
+             * Property: lineIconOffsetY
              * {Number} 绘制线按钮图标Y偏移量
              */
-            lineIconOffsetY:null,
+            //lineIconOffsetY:null,
 
             /**
              * APIProperty: areaIcon
@@ -61,16 +73,22 @@
              areaIcon:null,
 
             /**
-             * APIProperty: areaIconOffsetX
-             * {Number} 绘制面按钮图标X偏移量
+             * APIProperty: h_areaIcon
+             * {String} 绘制面按钮hover图标路径
              */
-            areaIconOffsetX:null,
+            h_areaIcon:null,
 
             /**
-             * APIProperty: areaIconOffsetY
+             * Property: areaIconOffsetX
+             * {Number} 绘制面按钮图标X偏移量
+             */
+            //areaIconOffsetX:null,
+
+            /**
+             * Property: areaIconOffsetY
              * {Number} 绘制面按钮图标Y偏移量
              */
-            areaIconOffsetY:null,
+            //areaIconOffsetY:null,
 
             /**
              * APIProperty: clearIcon
@@ -79,16 +97,22 @@
             clearIcon:null,
 
             /**
-             * APIProperty: clearIconOffsetX
-             * {Number} 清除按钮图标X偏移量
+             * APIProperty: h_clearIcon
+             * {String} 清除按钮hover图标路径
              */
-            clearIconOffsetX:null,
+            h_clearIcon:null,
 
             /**
-             * APIProperty: clearIconOffsetY
+             * Property: clearIconOffsetX
+             * {Number} 清除按钮图标X偏移量
+             */
+            //clearIconOffsetX:null,
+
+            /**
+             * Property: clearIconOffsetY
              * {Number} 清除按钮图标Y偏移量
              */
-            clearIconOffsetY:null,
+            //clearIconOffsetY:null,
 
             /**
              * Property: geoMarker_bev
@@ -118,6 +142,16 @@
              * (end)
              */
             init:function (option) {
+                this.pointIcon = SuperMap.Bev.Util.getImgPath("drawpoint_16_16.png");
+                this.lineIcon = SuperMap.Bev.Util.getImgPath("drawline_16_16.png");
+                this.areaIcon = SuperMap.Bev.Util.getImgPath("drawarea_16_16.png");
+                this.clearIcon = SuperMap.Bev.Util.getImgPath("clear_16_16.png");
+
+                this.h_pointIcon = SuperMap.Bev.Util.getImgPath("h_drawpoint_16_16.png");
+                this.h_lineIcon = SuperMap.Bev.Util.getImgPath("h_drawline_16_16.png");
+                this.h_areaIcon = SuperMap.Bev.Util.getImgPath("h_drawarea_16_16.png");
+                this.h_clearIcon = SuperMap.Bev.Util.getImgPath("h_clear_16_16.png");
+
                 for(var key in option){
                     this[key] = option[key];
                 }
@@ -152,12 +186,28 @@
                         me.drawFeature(e);
                     }).appendTo(this.body);
 
+                var btn1 = b1.button("option","buttonElement");
+                var icon = btn1.children(".ui-icon");
                 if(this.pointIcon){
-                    var btn1 = b1.button("option","buttonElement");
-                    var icon = btn1.children(".ui-icon");
                     icon.css({
-                        "background":"url("+this.pointIcon+") "+(this.pointIconOffsetX==null?0:this.pointIconOffsetX)+"px "+(this.pointIconOffsetY==null?0:this.pointIconOffsetY)+"px"
+                        "background":"url("+this.pointIcon+")"
                     });
+                }
+                if(this.h_pointIcon){
+                    b1.mouseover(function(icon){
+                        return function(){
+                            icon.css({
+                                "background":"url("+me.h_pointIcon+")"
+                            });
+                        }
+                    }(icon))
+                        .mouseout(function(icon){
+                            return function(){
+                                icon.css({
+                                    "background":"url("+me.pointIcon+")"
+                                });
+                            }
+                        }(icon));
                 }
 
                 b2 = $("<button id='line'>绘制线</button>").button({
@@ -168,12 +218,29 @@
                         me.drawFeature(e);
                     }).appendTo(this.body);
 
+                var btn = b2.button("option","buttonElement");
+                var icon = btn.children(".ui-icon");
                 if(this.lineIcon){
-                    var btn = b2.button("option","buttonElement");
-                    var icon = btn.children(".ui-icon");
                     icon.css({
-                        "background":"url("+this.lineIcon+") "+(this.lineIconOffsetX==null?0:this.lineIconOffsetX)+"px "+(this.lineIconOffsetY==null?0:this.lineIconOffsetY)+"px"
+                        "background":"url("+this.lineIcon+")"
                     });
+                }
+
+                if(this.h_lineIcon){
+                    b2.mouseover(function(icon){
+                        return function(){
+                            icon.css({
+                                "background":"url("+me.h_lineIcon+")"
+                            });
+                        }
+                    }(icon))
+                        .mouseout(function(icon){
+                            return function(){
+                                icon.css({
+                                    "background":"url("+me.lineIcon+")"
+                                });
+                            }
+                        }(icon));
                 }
 
                 b3 = $("<button id='polygon'>绘制面</button>").button({
@@ -184,12 +251,29 @@
                         me.drawFeature(e);
                     }).appendTo(this.body);
 
+                var btn = b3.button("option","buttonElement");
+                var icon = btn.children(".ui-icon");
                 if(this.areaIcon){
-                    var btn = b3.button("option","buttonElement");
-                    var icon = btn.children(".ui-icon");
                     icon.css({
-                        "background":"url("+this.areaIcon+") "+(this.areaIconOffsetX==null?0:this.areaIconOffsetX)+"px "+(this.areaIconOffsetY==null?0:this.areaIconOffsetY)+"px"
+                        "background":"url("+this.areaIcon+")"
                     });
+                }
+
+                if(this.h_areaIcon){
+                    b3.mouseover(function(icon){
+                        return function(){
+                            icon.css({
+                                "background":"url("+me.h_areaIcon+")"
+                            });
+                        }
+                    }(icon))
+                        .mouseout(function(icon){
+                            return function(){
+                                icon.css({
+                                    "background":"url("+me.areaIcon+")"
+                                });
+                            }
+                        }(icon));
                 }
 
                 b4 = $("<button id='clearFeatures'>清除绘制</button>").button({
@@ -200,14 +284,29 @@
                         me.clearFeatures();
                     }).appendTo(this.body);
 
+                var btn = b4.button("option","buttonElement");
+                var icon = btn.children(".ui-icon");
                 if(this.clearIcon){
-                    var btn = b4.button("option","buttonElement");
-                    var icon = btn.children(".ui-icon");
                     icon.css({
-                        "background":"url("+this.clearIcon+") "+(this.clearIconOffsetX==null?0:this.clearIconOffsetX)+"px "+(this.clearIconOffsetY==null?0:this.clearIconOffsetY)+"px"
+                        "background":"url("+this.clearIcon+")"
                     });
                 }
-
+                if(this.h_clearIcon){
+                    b4.mouseover(function(icon){
+                        return function(){
+                            icon.css({
+                                "background":"url("+me.h_clearIcon+")"
+                            });
+                        }
+                    }(icon))
+                        .mouseout(function(icon){
+                            return function(){
+                                icon.css({
+                                    "background":"url("+me.clearIcon+")"
+                                });
+                            }
+                        }(icon));
+                }
 
                 window.setTimeout(function(){
                     if(btn1)btn1[0].blur();
