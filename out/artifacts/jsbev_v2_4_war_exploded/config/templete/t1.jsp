@@ -82,7 +82,7 @@ if(bevCtrl==null)bevCtrl="1_2_3";
                                         "click":function () {
                                             if (!myMeasure) {//!myMeasure
                                                 var dialog = new SuperMap.Bev.Dialog(null, {
-                                                    "icon":SuperMap.Bev.Util.getImgPath("mesure_16_16.png"),
+                                                    "icon":SuperMap.Bev.Util.getImgPath("t_test.png"),//SuperMap.Bev.Util.getImgPath("mesure_16_16.png"),
                                                     "text":"¡ø&nbsp;&nbsp;&nbsp;&nbsp;À„"
                                                 });
 

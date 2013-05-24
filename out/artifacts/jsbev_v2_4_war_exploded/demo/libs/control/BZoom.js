@@ -113,6 +113,7 @@ SuperMap.Control.BZoom = SuperMap.Class(SuperMap.Control, {
         b = this.body;
         if(!b){
             b = document.createElement("div");
+           // $(b).addClass("ui-state-default ui-corner-all");
             el.appendChild(b);
             s = b.style;
             if(this.position){
@@ -129,10 +130,16 @@ SuperMap.Control.BZoom = SuperMap.Class(SuperMap.Control, {
         }
         if (!this.zoomInLink) {
             this.zoomInLink = this.createBtn(b,this.zoomInIcon,"smControlZoomIn");
+            $(this.zoomInLink).css({
+                "border-bottom":"0px solid"
+            }).addClass("ui-corner-top");
         }
         SuperMap.Element.addClass(this.zoomInLink, "smButton");
         if (!this.zoomOutLink) {
             this.zoomOutLink = this.createBtn(b,this.zoomOutIcon,"smControlZoomOut");
+            $(this.zoomOutLink).css({
+                "border-top":"0px solid"
+            }).addClass("ui-corner-bottom");
         }
         SuperMap.Element.addClass(this.zoomOutLink, "smButton");
         return {
@@ -161,6 +168,7 @@ SuperMap.Control.BZoom = SuperMap.Class(SuperMap.Control, {
         s.height = "27px";
         s.cursor = "pointer";
         p.appendChild(a);
+        $(a).addClass("ui-state-default").css({"border":"0px solid"});
 
         b = d.createElement("img");
         s = b.style;
@@ -263,17 +271,21 @@ SuperMap.Control.BZoom = SuperMap.Class(SuperMap.Control, {
             if(btn=="zoomInLink"){
                 if(e=="mouseover"){
                     t.zoomInLink.childNodes[0].src =  SuperMap.Bev.Util.getImgPath("h_zoom-plus.png");
+                    $(t.zoomInLink).addClass("ui-state-hover");
                 }
                 else if(e=="mouseout"){
                     t.zoomInLink.childNodes[0].src =  SuperMap.Bev.Util.getImgPath("zoom-plus.png");
+                    $(t.zoomInLink).removeClass("ui-state-hover");
                 }
             }
             else if(btn=="zoomOutLink"){
                 if(e=="mouseover"){
                     t.zoomOutLink.childNodes[0].src =  SuperMap.Bev.Util.getImgPath("h_zoom-minus.png");
+                    $(t.zoomOutLink).addClass("ui-state-hover");
                 }
                 else if(e=="mouseout"){
                     t.zoomOutLink.childNodes[0].src =  SuperMap.Bev.Util.getImgPath("zoom-minus.png");
+                    $(t.zoomOutLink).removeClass("ui-state-hover");
                 }
             }
         }

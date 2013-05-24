@@ -5,11 +5,11 @@
     <ignored path="jsbev_v2.4.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/../test5/.idea/workspace.xml" changelist="b018ccfd-291c-49c6-957c-be0b1fabc594" time="1368851325176" ignored="false" />
-    <file path="/index.jsp" changelist="b018ccfd-291c-49c6-957c-be0b1fabc594" time="1368850885781" ignored="false" />
+    <file path="/index.jsp" changelist="b018ccfd-291c-49c6-957c-be0b1fabc594" time="1369362950532" ignored="false" />
     <file path="/a.java" changelist="b018ccfd-291c-49c6-957c-be0b1fabc594" time="1368851394179" ignored="false" />
     <file path="/a.js" changelist="b018ccfd-291c-49c6-957c-be0b1fabc594" time="1368853345349" ignored="false" />
     <file path="/BevInit.java" changelist="b018ccfd-291c-49c6-957c-be0b1fabc594" time="1369010270824" ignored="false" />
-    <file path="/demo.html" changelist="b018ccfd-291c-49c6-957c-be0b1fabc594" time="1369119640142" ignored="false" />
+    <file path="/demo.html" changelist="b018ccfd-291c-49c6-957c-be0b1fabc594" time="1369374883522" ignored="false" />
     <file path="E:/svn/Transformers10_new/examples/js/cloudLayer.js" changelist="b018ccfd-291c-49c6-957c-be0b1fabc594" time="1369042667643" ignored="false" />
     <file path="E:/svn/OpenLayers-2.12/examples/bing.html" changelist="b018ccfd-291c-49c6-957c-be0b1fabc594" time="1369018670334" ignored="false" />
     <file path="E:/svn/Transformers10_new/libs/SuperMap/Control/Navigation.js" changelist="b018ccfd-291c-49c6-957c-be0b1fabc594" time="1369020494252" ignored="false" />
@@ -57,6 +57,11 @@
     <file path="/sm_measure.js" changelist="b018ccfd-291c-49c6-957c-be0b1fabc594" time="1369123620210" ignored="false" />
     <file path="/sm_geolocate.js" changelist="b018ccfd-291c-49c6-957c-be0b1fabc594" time="1369124737521" ignored="false" />
     <file path="/sm_drawFeature.js" changelist="b018ccfd-291c-49c6-957c-be0b1fabc594" time="1369126204226" ignored="false" />
+    <file path="/BZoom.js" changelist="b018ccfd-291c-49c6-957c-be0b1fabc594" time="1369365013413" ignored="false" />
+    <file path="$PROJECT_DIR$/../IconFactory/web/WEB-INF/web.xml" changelist="b018ccfd-291c-49c6-957c-be0b1fabc594" time="1369362326264" ignored="false" />
+    <file path="$PROJECT_DIR$/../IconFactory/web/index.jsp" changelist="b018ccfd-291c-49c6-957c-be0b1fabc594" time="1369362950532" ignored="false" />
+    <file path="$PROJECT_DIR$/../IconFactory/web/js/f.js" changelist="b018ccfd-291c-49c6-957c-be0b1fabc594" time="1369384097237" ignored="false" />
+    <file path="/f.js" changelist="b018ccfd-291c-49c6-957c-be0b1fabc594" time="1369383525321" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,59 +125,16 @@
       <file leaf-file-name="demo.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/demo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="63" selection-start="7299" selection-end="7299" vertical-scroll-proportion="-6.142857">
+            <state line="67" column="58" selection-start="2827" selection-end="2842" vertical-scroll-proportion="-9.5">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sm_menupanel.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/demo/js/controls/sm_menupanel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="256" column="58" selection-start="9899" selection-end="9899" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1369116772393" expanded="true" signature="2814:2828" placeholder="..." />
-                <marker date="1369116772393" expanded="true" signature="3014:3033" placeholder="..." />
-                <marker date="1369116772393" expanded="true" signature="3353:3369" placeholder="..." />
-                <marker date="1369116772393" expanded="true" signature="3612:3650" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sm_menu.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/demo/js/controls/sm_menu.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="161" column="66" selection-start="5557" selection-end="5557" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1369121916763" expanded="true" signature="2945:2961" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="t1.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="t1.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/config/templete/t1.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="157" column="93" selection-start="7976" selection-end="7976" vertical-scroll-proportion="-8.392858">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sm_measure.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/demo/js/controls/sm_measure.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="168" column="59" selection-start="5865" selection-end="5865" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sm_drawFeature.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/demo/js/controls/sm_drawFeature.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="232" column="97" selection-start="6998" selection-end="6998" vertical-scroll-proportion="0.67201424">
+            <state line="97" column="119" selection-start="4434" selection-end="4434" vertical-scroll-proportion="0.81640625">
               <folding />
             </state>
           </provider>
@@ -194,9 +156,10 @@
         <option value="$PROJECT_DIR$/web/demo/js/controls/sm_menu.js" />
         <option value="$PROJECT_DIR$/web/demo/js/controls/sm_measure.js" />
         <option value="$PROJECT_DIR$/web/demo/js/controls/sm_geolocate.js" />
+        <option value="$PROJECT_DIR$/web/demo/js/controls/sm_drawFeature.js" />
+        <option value="$PROJECT_DIR$/web/demo/libs/control/BZoom.js" />
         <option value="$PROJECT_DIR$/web/demo.html" />
         <option value="$PROJECT_DIR$/web/config/templete/t1.jsp" />
-        <option value="$PROJECT_DIR$/web/demo/js/controls/sm_drawFeature.js" />
       </list>
     </option>
   </component>
@@ -309,33 +272,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsbev_v2.4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsbev_v2.4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controls" />
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -351,16 +288,16 @@
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors" />
-    <property name="last_opened_file_path" value="E:/svn/Transformers10_new" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -591,7 +528,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -604,11 +541,11 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.3922114" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16786227" sideWeight="0.8164117" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15997131" sideWeight="0.8052851" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33006993" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1814921" sideWeight="0.8164117" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18358831" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18579628" sideWeight="0.8052851" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19471489" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -679,13 +616,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bev/PageManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="107" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" />
@@ -710,16 +640,12 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/log4j-1.2.14.jar!/org/apache/log4j/PropertyConfigurator.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="23" selection-start="1358" selection-end="1358" vertical-scroll-proportion="0.029007634">
-          <folding />
-        </state>
+        <state line="25" column="23" selection-start="1358" selection-end="1358" vertical-scroll-proportion="0.029007634" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bev/BevInit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="65" selection-start="1266" selection-end="1266" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="50" column="65" selection-start="1266" selection-end="1266" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
@@ -731,11 +657,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/log.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="16" selection-start="231" selection-end="231" vertical-scroll-proportion="0.4064171">
-          <folding>
-            <marker date="1369042415369" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="12" column="16" selection-start="231" selection-end="231" vertical-scroll-proportion="0.4064171" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/demo/js/controls/sm_measure.js">
@@ -747,49 +669,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/demo/js/controls/sm_geolocate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="64" selection-start="5817" selection-end="5817" vertical-scroll-proportion="3.923351">
-          <folding />
-        </state>
+        <state line="178" column="64" selection-start="5817" selection-end="5817" vertical-scroll-proportion="3.923351" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/demo/js/controls/sm_menupanel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="256" column="58" selection-start="9899" selection-end="9899" vertical-scroll-proportion="0.0">
+        <state line="256" column="58" selection-start="9899" selection-end="9899" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/demo/js/controls/sm_menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="161" column="66" selection-start="5557" selection-end="5557" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/demo/js/controls/sm_drawFeature.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="279" column="71" selection-start="8759" selection-end="8759" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/demo/libs/control/BZoom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="182" column="54" selection-start="4479" selection-end="4479" vertical-scroll-proportion="2.4285715">
           <folding>
-            <marker date="1369116772393" expanded="true" signature="2814:2828" placeholder="..." />
-            <marker date="1369116772393" expanded="true" signature="3014:3033" placeholder="..." />
-            <marker date="1369116772393" expanded="true" signature="3353:3369" placeholder="..." />
-            <marker date="1369116772393" expanded="true" signature="3612:3650" placeholder="..." />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/demo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="63" selection-start="7299" selection-end="7299" vertical-scroll-proportion="-6.142857">
+        <state line="67" column="58" selection-start="2827" selection-end="2842" vertical-scroll-proportion="-9.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/config/templete/t1.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="93" selection-start="7976" selection-end="7976" vertical-scroll-proportion="-8.392858">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/demo/js/controls/sm_menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="66" selection-start="5557" selection-end="5557" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1369121916763" expanded="true" signature="2945:2961" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/demo/js/controls/sm_drawFeature.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="232" column="97" selection-start="6998" selection-end="6998" vertical-scroll-proportion="0.67201424">
+        <state line="97" column="119" selection-start="4434" selection-end="4434" vertical-scroll-proportion="0.81640625">
           <folding />
         </state>
       </provider>
